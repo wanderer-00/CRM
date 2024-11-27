@@ -5,6 +5,8 @@
 
 ## Состояние аппаратуры
 ![вариант 1](https://www.printvisor.com/media/2021/08/printvisor-interface-2.png)
+![вариант 2](http://www.printstore.ru/images/snmp_discovery_monitoring_preview.jpg)
+![вариант 3](https://static.tildacdn.com/tild3762-6336-4965-b438-303536346330/Screenshot_at_Mar_24.png)
 
 
 
