@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+}
+
+.ink {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto auto 1fr;
+}
+
+progress {
+  border-radius: 10px;
+}
+progress::-webkit-progress-bar {
+  background-color: lightgray
+}
+progress::-moz-progress-bar {
+  /* стилевые правила */
+}
+#C::-webkit-progress-value {
+  background-color: rgb(1,169,236);
+}
+#M::-webkit-progress-value {
+  background-color: rgb(228,1,123);
+}
+#Y::-webkit-progress-value {
+  background-color: rgb(248,245,1);
+}
+#K::-webkit-progress-value {
+  background-color: rgb(1, 1, 1);
+}
