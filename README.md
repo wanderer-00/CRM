@@ -1,3 +1,6 @@
+# Задачи
+- Таск система графиков заказов с возможностью печати на принтере формата листа A4, так и на чековом [аппарате по распечатке артикулов](https://mertech.ru/image/catalog/articles/printery/pechat-etiketok-na-marketplacy.jpg)
+
 # Вариации UI/UX
 ## Грузоперевозки
 ![вариант 1](https://i.pinimg.com/736x/19/0a/f8/190af81041f08ef23cc39cfc036139c9.jpg)
