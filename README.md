@@ -1,5 +1,6 @@
 # Задачи
-- Таск система графиков заказов с возможностью печати на принтере формата листа A4, так и на чековом [аппарате по распечатке артикулов](https://mertech.ru/image/catalog/articles/printery/pechat-etiketok-na-marketplacy.jpg)
+- [Таск система](https://imgs.yagla.ru/blog/1925/trello-1646582384.png) графиков заказов с возможностью печати на принтере формата листа A4, так и на чековом [аппарате по распечатке артикулов](https://mertech.ru/image/catalog/articles/printery/pechat-etiketok-na-marketplacy.jpg). Добавить возможность перетаскивания графиков и их группировки
+- 
 
 # Вариации UI/UX
 ## Грузоперевозки
