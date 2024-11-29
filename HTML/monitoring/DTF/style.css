@@ -13,8 +13,7 @@ main .wrapper {
     grid-template-columns: 80px 1fr;
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas:
-        "ico   ink"
-        "paper paper";
+        "ico   ink";
 }
 
 .ico {
@@ -24,9 +23,10 @@ main .wrapper {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(img/free-icon-multifunction-printer-1547967.png);
+    background-image: url(icon.svg);
 }
 
+/* INK */
 .ink {
     display: grid;
     grid-area: ink;
@@ -41,11 +41,11 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-    background-color: lightgray;
+    background-color: lightgray
 }
 
 progress::-moz-progress-bar {
-    /* стилевые правила */
+    border: 1px solid red
 }
 
 #C::-webkit-progress-value {
@@ -64,18 +64,6 @@ progress::-moz-progress-bar {
     background-color: rgb(1, 1, 1);
 }
 
-.paper {
-    display: flex;
-    grid-gap: 20px;
-}
-
-.paper > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-area: paper;
-    aspect-ratio: 1/1;
-    border: 3px solid #343434;
-    border-radius: 8px;
-    background: linear-gradient(0deg, lightblue 0%, lightblue 40%, transparent 40%);
+#W::-webkit-progress-value {
+    background-color: rgb(255, 255, 240);
 }
