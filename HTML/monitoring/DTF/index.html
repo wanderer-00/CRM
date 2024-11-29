@@ -40,6 +40,20 @@
                     </div>
                 </div>
             </div>
+
+            <h2>Характеристики головы XP600 (DX11)</h2>
+            <pre>Размер капли, пл: 3-21
+Ширина прохода, мм: 21
+Разрешение печати, dpi: 1440
+Количество активных дюз: 180
+Частота впрыска, кГц: 8,29
+Вес, г: 360
+Цена БЕЗ НДС, руб: 35000
+</pre>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" height="200px">
+                <title>test headprint</title>
+            </svg>
         </main>
         <!--
         <footer>
@@ -50,5 +64,56 @@
 -->
     </div>
 </body>
+
+<script>
+    let testHeadPrint = document.getElementsByTagName("svg")[0];
+    
+    for(n=0;n<4;n++){
+        for(i=0;i<45;i++){
+            if (i==10&&n==3){
+                testHeadPrint.innerHTML += `<line x1="${n*20}" y1="${i*4+n}" x2="${(n+1)*20}" y2="${i*4+n}" stroke="red" stroke-width="2" />`;
+            } else {
+                testHeadPrint.innerHTML += `<line x1="${n*20}" y1="${i*4+n}" x2="${(n+1)*20}" y2="${i*4+n}" stroke="black" stroke-width="2" />`;
+            }
+        }
+        i++
+    }
+    
+    for(n=4;n<8;n++){
+        for(i=0;i<45;i++){
+            testHeadPrint.innerHTML += `<line x1="${n*20}" y1="${i*4+n-4}" x2="${(n+1)*20}" y2="${i*4+n-4}" stroke="rgb(248, 245, 1)" stroke-width="2" />`;
+        }
+        i++
+    }
+    
+    for(n=8;n<12;n++){
+        for(i=0;i<45;i++){
+            testHeadPrint.innerHTML += `<line x1="${n*20}" y1="${i*4+n-8}" x2="${(n+1)*20}" y2="${i*4+n-8}" stroke="rgb(1, 169, 236)" stroke-width="2" />`;
+        }
+        i++
+    }
+    
+    for(n=12;n<16;n++){
+        for(i=0;i<45;i++){
+            testHeadPrint.innerHTML += `<line x1="${n*20}" y1="${i*4+n-12}" x2="${(n+1)*20}" y2="${i*4+n-12}" stroke="rgb(228, 1, 123)" stroke-width="2" />`;
+        }
+        i++
+    }
+    
+    for(n=16;n<20;n++){
+        for(i=0;i<45;i++){
+            testHeadPrint.innerHTML += `<line x1="${n*20}" y1="${i*4+n-16}" x2="${(n+1)*20}" y2="${i*4+n-16}" stroke="rgb(1, 169, 236)" stroke-width="2" />`;
+        }
+        i++
+    }
+    
+    for(n=20;n<24;n++){
+        for(i=0;i<45;i++){
+            testHeadPrint.innerHTML += `<line x1="${n*20}" y1="${i*4+n-20}" x2="${(n+1)*20}" y2="${i*4+n-20}" stroke="rgb(228, 1, 123)" stroke-width="2" />`;
+        }
+        i++
+    }
+    </script>
+
 <script type="text/javascript" src="data.js"></script>
 <script type="text/javascript" src="script.js"></script></html>
