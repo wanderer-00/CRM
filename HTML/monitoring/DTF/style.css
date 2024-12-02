@@ -67,8 +67,3 @@ progress::-moz-progress-bar {
 #W::-webkit-progress-value {
     background-color: rgb(255, 255, 240);
 }
-
-
-svg {
-    border: 1px solid red;
-}

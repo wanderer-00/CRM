@@ -1,0 +1,13 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #343434;
+}
+
+svg {
+    border: 1px solid red;
+}
