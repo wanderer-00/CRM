@@ -6,7 +6,7 @@ let column = 0;
 let row = 1;
 let width = 20;
 
-let channelColor = ['black', 'yellow', 'lightblue', 'pink', 'lightblue', 'pink']
+let channelColor = ['rgb(1, 1, 1)', 'rgb(248, 245, 1)', 'rgb(1, 169, 236)', 'rgb(228, 1, 123)', 'rgb(1, 169, 236)', 'rgb(228, 1, 123)']
 
 for (block; block < 6; block++) {
     for (column; column < 4; column++) {
