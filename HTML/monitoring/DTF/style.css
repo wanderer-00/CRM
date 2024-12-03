@@ -1,4 +1,5 @@
 body {
+    width: 100%;
     font-family: sans-serif;
 }
 
@@ -9,11 +10,14 @@ img {
 
 main .wrapper {
     display: grid;
+    width: 80%;
+    margin: auto;
     grid-gap: 20px;
     grid-template-columns: 80px 1fr;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: 100px 24;
     grid-template-areas:
-        "ico   ink";
+        "ico    ink   "
+        "status status";
 }
 
 .ico {
@@ -66,4 +70,18 @@ progress::-moz-progress-bar {
 
 #W::-webkit-progress-value {
     background-color: rgb(255, 255, 240);
+}
+
+.icon {
+    height: 16px;
+    aspect-ratio: 1/1;
+}
+
+.status {
+    grid-area: status;
+    border: 1px solid red;
+}
+.status > img {
+    height: 100%;
+    cursor: pointer;
 }
