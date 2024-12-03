@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <title>Главная страница</title>
 </head>
+
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    .wrapper {
+        width: 80%;
+        margin: auto;
+    }
+    .menu {
+        grid-gap: 20px;
+        text-align: center;
+        display: flex;
+    }
+    .menu > a:hover {
+        background-color: antiquewhite;
+    }
+    .ico {
+        width: 100px;
+        aspect-ratio: 1/1;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+</style>
+
 <body>
     <div class="WRAPPER">
         <header>
@@ -12,13 +37,21 @@
         <main>
             <div class="wrapper">
                 <h2>Модуль мониторинга</h2>
-                <a href="HTML/monitoring/DTF/index.html">DTF</a><br>
-                <a href="HTML/monitoring/ineo/index.html">Ineo</a>
+                <div class="menu">
+                    <a href="HTML/monitoring/DTF/index.html">
+                        <div class="ico" style="background-image: url(HTML/monitoring/DTF/icon.svg)"></div>
+                        <p>DTF</p>
+                    </a><br>
+
+                    <a href="HTML/monitoring/ineo/index.html">
+                        <div class="ico" style="background-image: url(HTML/monitoring/ineo/img/poster.png)"></div>
+                        <p>Ineo <sup>+</sup> 4065</p>
+                    </a>
+                </div>
             </div>
         </main>
         <footer>
             <div class="wrapper"></div>
         </footer>
     </div>
-</body>
-</html>
+</body></html>
