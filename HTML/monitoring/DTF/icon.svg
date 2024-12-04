@@ -33,24 +33,19 @@
                 stroke-width: 15px;
             }
 
-            .cls-8 {
-                fill: rgb(1, 169, 236);
-            }
-
-            .cls-9 {
-                fill: rgb(228, 1, 123);
-            }
-
-            .cls-10 {
-                fill: rgb(248, 245, 1);
-            }
-            
-            .cls-11 {
-                fill: rgb(1, 1, 1);
+            .C {stroke: rgb(1, 169, 236)}
+            .M {stroke: rgb(228, 1, 123)}
+            .Y {stroke: rgb(248, 245, 1)}
+            .K {stroke: rgb(1, 1, 1)}
+            .W {stroke: rgb(255, 255, 240)}
+            .ink {
+                stroke-width: 20;
+                stroke: black;
+                stroke-linecap: round;
             }
             
-            .cls-12 {
-                fill: rgb(255, 255, 240);
+            .name {
+                font: bold 80px sans-serif;
             }
         </style>
     </defs>
@@ -75,11 +70,14 @@
     <rect class="cls-6" x="64.86" y="361.86" width="48.56" height="30" />
     <rect class="cls-6" x="386.58" y="361.86" width="48.56" height="30" />
     <path class="cls-7" d="M410.14,293.63H89.86a25,25,0,0,0-25,25v73.23h48.56V352.72H386.58v39.14h48.56V318.63A25,25,0,0,0,410.14,293.63Z" />
+
+    <g class="ink">
+        <line class="C" x1="320" x2="320" y1="190" y2="250"></line>
+        <line class="M" x1="350" x2="350" y1="190" y2="250"></line>
+        <line class="Y" x1="380" x2="380" y1="190" y2="250"></line>
+        <line class="K" x1="410" x2="410" y1="190" y2="250"></line>
+        <line class="W" x1="440" x2="440" y1="190" y2="250"></line>
+    </g>
     
-    <!-- ink -->
-    <circle class="cls-8"  cx="320" cy="190" r="10" />
-    <circle class="cls-9"  cx="350" cy="190" r="10" />
-    <circle class="cls-10" cx="380" cy="190" r="10" />
-    <circle class="cls-11" cx="410" cy="190" r="10" />
-    <circle class="cls-12" cx="440" cy="190" r="10" />
+    <text x="40" y="246" class="name">DTF</text>
 </svg>
