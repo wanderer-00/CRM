@@ -11,38 +11,58 @@
     *:before {
         box-sizing: border-box;
     }
-    
+
     body {
+        color: #FFF;
         font-family: sans-serif;
+        background-color: #0D0D0D;
     }
+
     .wrapper {
         width: 80%;
         margin: auto;
+        padding: 0 2em;
     }
+
     .menu {
-        grid-gap: 20px;
         text-align: center;
-        display: flex;
-        
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: repeat(2, 1fr);
+
     }
-    .menu > a {
+
+    .box {
+        padding: 1em;
+        background-color: #1F1F1F;
+        border-radius: 1em;
+    }
+
+    .menu>a {
         border: 1px solid transparent;
         padding: 10px;
         border-radius: 8px;
     }
-    .menu > a:hover {
+
+    .menu>a:hover {
         border: 1px solid #343434
     }
+
     .ico {
         width: 100%;
         aspect-ratio: 1/1;
         background-repeat: no-repeat;
         background-size: contain;
     }
-    
+
     @media (orientation:portrait) {
-        body {font-size: 48px}
-        .wrapper {width: 100%}
+        body {
+            font-size: 48px
+        }
+
+        .wrapper {
+            width: 100%
+        }
     }
 </style>
 
@@ -55,15 +75,21 @@
             <div class="wrapper">
                 <h2>Модуль мониторинга</h2>
                 <div class="menu">
-<!--                    <a href="HTML/monitoring/DTF/index.html">-->
+                    <!--                    <a href="HTML/monitoring/DTF/index.html">-->
+                    <div class="box">
                         <div class="ico" style="background-image: url(HTML/monitoring/DTF/icon.svg)"></div>
-<!--                        <p>DTF</p>-->
-<!--                    </a><br>-->
+                    </div>
 
-<!--                    <a href="HTML/monitoring/ineo/index.html">-->
+                    <!--                        <p>DTF</p>-->
+                    <!--                    </a><br>-->
+
+                    <!--                    <a href="HTML/monitoring/ineo/index.html">-->
+                    <div class="box">
                         <div class="ico" style="background-image: url(HTML/monitoring/ineo/img/poster.png)"></div>
-<!--                        <p>Ineo <sup>+</sup> 4065</p>-->
-<!--                    </a>-->
+                    </div>
+                    <!--                        
+                        <p>Ineo <sup>+</sup> 4065</p>-->
+                    <!--                    </a>-->
                 </div>
             </div>
         </main>
