@@ -6,6 +6,13 @@
     <title>Коробки</title>
 </head>
 
+<style>
+    model-viewer {
+        width: 100%;
+        height: 400px;
+    }
+</style>
+
 <body>
     <div class="WRAPPER">
         <header>
@@ -13,7 +20,14 @@
         </header>
         <main>
             <div class="wrapper">
-                <iframe width="640" height="480" style="border:1px solid #eeeeee;" src="https://3dviewer.net/embed.html#model=https://raw.githubusercontent.com/kovacsv/Online3DViewer/dev/test/testfiles/gltf/DamagedHelmet/glTF-Binary/DamagedHelmet.glb$camera=-0.33317,1.09832,3.95453,-0.00248,0.00001,-0.18715,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,43,46,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"></iframe>
+                <!--                <iframe width="640" height="480" style="border:1px solid #eeeeee;" src="https://3dviewer.net/embed.html#model=https://raw.githubusercontent.com/kovacsv/Online3DViewer/dev/test/testfiles/gltf/DamagedHelmet/glTF-Binary/DamagedHelmet.glb$camera=-0.33317,1.09832,3.95453,-0.00248,0.00001,-0.18715,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,43,46,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"></iframe>-->
+
+                <!-- Import the component -->
+                <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+                <!-- Use it like any other HTML element -->
+                <model-viewer src="model.glb" ar environment-image="1.hdr" poster="https://toping.uz/storage/images/Wr6lJge3F7cb7EPgBBXdHcym8lou8EQ6.webp" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+
             </div>
         </main>
         <footer>
@@ -27,6 +41,4 @@
             </div>
         </footer>
     </div>
-</body>
-
-</html>
+</body></html>
