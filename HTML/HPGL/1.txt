@@ -1,0 +1,256 @@
+HPGL = Hewlet packard grafic language
+The drawing file looks like PU0,0;PD100,100 (try opening a *.plt file with notepad or edit)
+Wich means
+    Penup x0,y0
+    ; is the seperator
+    PenDown x100,y100
+
+Yes it is that simple
+
+There are some more 2 letter commands PA = PenAbsolute and PR = PenRelative
+These 4 commands are also the most used
+for moreinfo see the pdf file  HPGL.pdf
+
+HPGL files can be made with most vector based drawing programs/CAD
+For example
+                                                CorelDraw
+                                                Micrografx Designer
+                                                Autocad
+                                     `            draftchoice for windows http://www.triusinc.com/dcwin.htm
+
+                                              DesignCad 30 day trial version of DesignCAD 3D MAX Plus
+                                              Link 2CAD for Windows95+ @ Simtel
+
+<>                                              
+                                         HPGL viewer PloView         =>           Previews HPGL and saves to various file formats
+                                              Windows PCB design
+                                              Eagle PCB designer http://www.cadsoftusa.com  run outlines.ULP or mill_outlines.ULP
+
+                                              Windows Printer/Plotter drivers
+                                              Print => trace printed to file(HPGL printer driver) (i use a Roland driver in WinXP)
+
+                                              For DOS users
+                                                Draft choice for dos
+                                              Link 2 CAD for DOS @ Simtel
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Understanding HPGL
+ 
+
+Data Exchange by Ralph Grabowski
+
+Hewlett-Packard has found itself in the fortunate position of having creating two de facto standards for output devices: HPGL (short for
+Hewlett-Packard Graphics Language) and PCL, short for Printer Control Language. Although HPGL was intended for HP's line of pen plotters,
+variants have found their way into inkjet and laser printers. PCL, on the other hand, is strictly used by HP for its raster devices and is very slowly
+loosing favor to PostScript and Windows-based direct-GDI.
+
+A Brief History of HPGL
+
+HPGL is a command set embedded in the ROM of pen plotters to help reduce the work required by applications programmers to create
+plotted output. HPGL uses two-letter mnemonics as instructions for drawing lines, circles, text, and simple symbols. HPGL has evolved over
+the years as HP added features to its line of pen, electrostatic, inkjet, and laser plotters and printers.
+
+However, there is one primary drawback to HPGL: it is bulkier than other plotting languages, which means it takes longer to transmit an HPGL
+plot file than, say, a Houston Instruments' DM/PL (short for digital microprocessor plotting language) plot file. To overcome the limitation,
+Hewlett-Packard in 1988 introduced HPGL/2, which featured "polyline encoding," a form of data compression that reduces the plot file size
+and, hence, transmission time by two-thirds.
+
+With HPGL being the de facto plotting standard, competitors inevitably include HPGL or some similarly-named dialect in their plotter products.
+In addition, HPGL has become a form of CAD drawing translation of last resort, since all CAD packages produce HPGL files and several read
+the format.
+
+Coordinate Systems
+
+One irritant to HPGL is that there are two different coordinate systems in use. Small-format plotters, including A- and B-size plotters, locate the
+origin at the lower-left corner; large-format plotters, including D- and E-size plotters, located the origin at the center of the media.
+ 
+
+TIP: HPGL uses the plu (short for plotter units) as its form of measurement. There are 40 plu per millimeter and 1,016 plu in one inch.
+ 
+
+All plotting languages have two forms of limits: (1) hard limits; and (2) soft limits. The hard limits are the limits beyond which the plotter cannot
+plot due to physical constraints. The soft limits are usually imposed by the application software generating the plot file. Any part of the drawing
+extending beyond the limits (hard or soft) is clipped (is not be plotted). HPGL names the plot extents as P1 (the lower-left corner) and P2, the
+upper-right corner.
+
+Reading An HPGL Plot File
+
+A typical HPGL plot file consists mostly of ASCII characters with some control codes thrown in. You can read the file with any text editor. Since
+the plot files tend to be written as one long line (no CR or LF), it is helpful to have a text editor with no limitation on line length.
+
+To produce a sample HPGL file, configure a CAD package to plot to file using an HPGL driver (possibly called "HP Plotter" or given a specific
+model number, such as HP7220 or HP7586). Create a very simple drawing (a couple of lines), then plot the drawing to disk. When you load a
+plot file into the text editor, it looks something like this:
+
+Plot initialization data:
+[Esc].(;.I81;;17:[Esc].N;19:IN;SC;PU;PU;SP1;LT;VS36;
+
+Plot data:
+PA12345,4567;PD;PA-2345;6789; ...et cetera
+
+Plot termination data:
+PU;PA0,0;SP;EC;PG1;EC1;OE;
+
+Decoding the HPGL Code
+
+HPGL consists of two kinds of instructions:
+
+          1 ... HPGL instructions.
+          2 ... Device-control instructions (or DCI, for short).
+
+The most typical HPGL instruction is:
+
+PA1234,5678;
+The PA instruction moves the pen to absolute position (1234,5678) in plu coordinates. The instruction has four parts to its syntax: PA is an
+HPGL command (in this case, to move the pen).
+   1234 and 5678 are parameters (in this case, absolute coordinates).
+   , a separator (the comma) between two or more parameters.
+   ; and a terminator (the semi-colon).
+
+PA All HPGL instructions start with a two-letter mnemonic. For example, PA is the abbreviation for Pen Absolute, a pen positioning command.
+Other common command mnemonics include:
+
+          PD for pen down
+          PU for pen up
+          SP for select pen
+          VS for velocity speed.
+
+1234 and 5678 Most HPGL instructions include one or more parameters to modify their meaning. Here, 1234 and 5678 are the absolute pen
+coordinates in plu. Parameters of other instructions are the pen number and plotter speed.
+ 
+
+TIP: To use the default parameter of an instruction, simply leave out the parameter value.
+ 
+
+, (separator) When an instruction uses more than one parameter, HPGL wants them separated with:
+
+          a comma ( , )
+          a space ( )
+          a plus sign ( + )
+          a negative sign ( - ).
+ 
+
+TIP: HP recommends use of the comma as the separator; only use the negative sign with negative values.
+ 
+
+; (terminator) To indicate the end of the instruction, you have the option of using a semi-colon ( ; ) or nothing at all.
+ 
+
+TIP: Use the semi-colon when you want to make the plot file legible to humans; use no terminator to significantly reduce transmission time and
+file size.
+ 
+
+Device-Control Instructions
+
+HPGL uses device-control instructions to set up the plotter's hardware. These instructions set up communications between the CAD software
+and the plotter, return plotter status data, reset the plotter, et cetera.
+
+Device-control instructions (DCI, for short) begin with the escape character (ASCII 27, or 1B in hex) shown as [Esc] in this tutorial. Text editors
+often show Escape as a left arrow ( <- ) or as Ctrl-Bracket ( ^[ ). A typical HP device-control instruction looks like this:
+[Esc].N0;19:
+
+The purpose of this DCI is to specify the Xoff (short for transmission off) trigger character, which tells the plotter which ASCII character the CAD
+software expects to receive as the Xoff character, as follows:
+
+          [Esc]. (Escape followed by period) Alerts the plotter that a device-control instruction follows.
+          N This DCI specifies the Xoff handshake character.
+          0 Value of intercharacter delay.
+
+          TIP: The default value is zero; default DCI values can be omitted, as in [Esc].N;19;
+ 
+
+          ; (separator) Separates DCI parameters.
+
+          TIP: The separator is optional for DCIs that don't use parameters.
+ 
+
+          19 The ASCII value of the Xoff character. ASCII 19 is DC3, a commonly-used value.
+          : (terminator) Terminates the DCI.
+
+          TIP: DCIs with parameters must end with the colon ( : ); the terminator is optional for DCIs without parameters.
+ 
+
+Initializing the HPGL Plot File
+
+A typical HPGL plot file consists mostly of ASCII characters with some control codes thrown in. The plot initialization data (in this case,
+generated by AutoCAD R11) looks something like this:
+[Esc].(;[Esc].I81;;17:[Esc].N;19:IN;SC;PU;SP1;LT;VS36;
+
+To make it easier to read, letþs reformat the data with one instruction per line:
+[Esc].(;
+[Esc].I81;;17:
+[Esc].N;19:
+IN;
+SC;
+PU;
+SP1;
+LT;
+VS36;
+
+[Esc].(; instructs the plotter to interpret data as HPGL and DCI instructions, rather than plotting the data stream as literal text characters. This
+DCI has no parameters; [Esc].Y is an alternative provided by HPGL.
+
+[Esc].I81;;17: sets the parameters for Xon-Xoff handshake mode, with the following parameters:
+
+          81; (Xoff threshold level) When 81 bytes remain free in the plotter buffer, the plotter sends the Xoff instruction to the CAD software. Xoff
+          tells the CAD software to stop sending data, otherwise the plotter buffer fills up and data is lost. TIP: If the byte size is too large, HPGL
+          automatically reduces the size to one byte smaller than the plotterþs logical I/O buffer size; use [Esc].Sn: to find the size of the buffer.
+          ; (ommited parameter) Since the next parameter is missing, the plotter is able to differentiate between Xoff/Xon and Enq/Ack protocols.
+          TIP: You can substitute 0 (zero) for the ommited parameter.
+          17: (Xon trigger character) After the CAD software stops sending data to the plotter, the plotter uses the Xon trigger character to tell the
+          software to continue sending data. ASCII 17 is DC3, the standard value. TIP: You can specify any decimal ASCII value between 0 and
+          126 and use as many as ten characters.
+
+[Esc].N;19: was described earlier.
+
+IN; (INitialize) Resets most of the plotter's functions to default settings, some of which follow:
+
+          Set linetype to solid (equivalent HPGL instruction is LT0;)
+          Set plotting mode to absolute (PA;)
+          Set chord angle to 5 degrees (CT;)
+          Turn off user scaling (SC;)
+          Recognize all HPGL errors (IM;)
+          Set input window to hardclip limits (IW;)
+          Set units to metric and pen width to 0.3mm (PT;)
+          Lift pen (PU;) and move it within 600 plu of hardclip limits
+ 
+
+TIP: Settings made on the plotter's front panel are not reset.
+
+TIP: Recall that the semi-colon ( ; ) terminator is optional.
+ 
+
+SC; (SCale) Scale the coordinate system to the plot's extents, P1 and P2; the default is no scale (the CAD software handles the scaling).
+
+PU; (Pen Up) Lifts the pen; optionally moves the pen to a new location.
+
+SP1; (Select Pen) Selects a pen, #1 in this case.
+ 
+
+TIP: HPGL automatically returns the current pen to its holder at the end of a plot.
+ 
+
+LT; (Line Type) Selects the linetype and pattern length; the default is continuous lines (the CAD software handles the linetype generation).
+
+VS36; (Velocity Select) Selects the pen speed in cm/sec; optionally selects the pen by number.
+ 
+
+TIP: The pen speed is sometimes overruled by the setting of the pen carousel. HP suggests using a slower speed to create a slightly thicker
+line (but at the expense of longer plot time).
+ 
+ 
+ 
+
+© Copyright 1994-1995 Automata, Inc.
+Last modified: February 19, 1996

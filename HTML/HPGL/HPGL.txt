@@ -1,0 +1,212 @@
+Hewlett Packard Graphics Language
+Commands
+All commands MUST be terminated by a semi-colon or a linefeed. Spaces can NOT be substituted for required commas in the syntax of a command.
+
+ 
+ AA (Arc Absolute): Angle is a floating point # (requires non integer value) Draws an arc with the center at (X,Y) and a positive angle creates a counter-clockwise arc. If the chord angle is specified, this will be the number of degrees used for stepping around the arc. If no value is given then a default value of five degrees is used.
+ AA x, y, a {,b};
+
+ AR (Arc Relative): Angle is a floating point # (requires non integer value)Draws an arc with the center at offset (X,Y) . A positive angle creates a counter-clockwise arc. If the chord angle is specified, this will be the number of degrees used for stepping around the arc. If no value is given then a default value of five degrees is used.
+ AR Dx, Dy, a {, b};
+
+ CA (Alternate Character Set):
+ CA {n};
+
+ CI (Circle):
+ CI r {,b};
+
+ CP (Character Plot):
+ CP {h, v};
+  h         [-127.9999 .. 127.9999]  Anzahl der Zeichen horizontal
+  v         [-127.9999 .. 127.9999]  Anzahl der Zeichen vertikal
+
+ CS (Standard Character Set):
+ CS {n};
+
+ DC (Digitize Clear):
+ DC;
+
+ DP (Digitize Point):
+ DP;
+
+ DF (Default):
+ DF;
+
+ DR (Relative Direction for Label Text):
+ DR s, a;
+
+ DI (Absolute Direction for Label Text):
+ DI {s, a};
+
+ DT (Define Terminator - this character becomes unavailable except to terminate a label string. Default is ^C control-C):
+ DT t; 
+
+ EA (rEctangle Absolute - Unfilled, from current position to diagonal x,y):
+ EA x, y;
+
+ ER (rEctangle Relative - Unfilled, from current position to diagonal x,y):
+ ER x,y;
+
+ FT (Fill Type):
+ FT {s {,l {a}}};
+
+ IM (Input Mask):
+ IM {f};
+
+ IN (Initialize): This command instructs the controller to begin processing the HPGL plot file. Without this, the commands in the file are received but never executed. If multiple IN s are found during execution of the file, the controller performs a Pause/Cancel operation. All motion from the previous job, yet to be executed, is lost and the new information is executed.
+ IN;
+
+ IP Input P1 and P2
+ IP {P1x, P1y {, P2x, P2y}};
+
+ IW (Input Window):
+ IW {XUL, YUL, XOR, YOR};
+
+ LB (Label):
+ LB c1 .. cn t;
+
+ OA (Output Actual Position and Pen Status):
+ OA;
+
+ OC (Output Commanded Position and Pen Status):
+ OC;
+
+ OD (Output Digitized Point and Pen Status):
+ OD;
+
+ OE (Output Error):
+ OE;
+
+ OF (Output Factor):
+ OF;
+
+ OH (Output Hard Clip Limits):
+ OH;
+
+ OI (Output Identification):
+ OI;
+
+ OO (Output Option):
+ OO;
+
+ OP (Output P1 and P2):
+ OP;
+
+ OS (Output Status):
+ OS;
+
+ PA (Plot Absolute): Moves to an absolute HPGL position and sets absolute mode for future PU and PD commands. If no arguments follow the command, only absolute mode is set.
+ PA {x1, y1 {{PU|PD|,} ..., ..., xn, yn}};
+   P1x, P1y, P2x, P2y  [Integer in ASCII]
+
+ PD (Pen Down): Executes <current pen> pen then moves to the requested position if one is specified. This position is dependent on whether absolute or relative mode is set. This command performs no motion in 3-D mode, but the outputs and feedrates are affected.
+ PD {x, y};
+
+ PR (Plot Relative): Moves to the relative position specified and sets relative mode for future PU and PD commands. If no arguments follow the command, only relative mode is set.
+ PR {Dx1, Dy1 {{PU|PD|,} ..., ..., Dxn, Dyn}};
+
+ PS (Paper Size):
+ PS {n};
+
+ PT (Pen Thickness):
+ PT {l};
+
+ PU (Pen Up): Executes <current pen> pen then moves to the requested position if one is specified. This position is dependent on whether absolute or relative mode is set. This command performs no motion in 3-D mode, but the outputs and feedrates are affected.
+ PU {x, y};
+
+ RA (Rectangle Absolute - Filled, from current position to diagonal x,y):
+ RA x, y;
+
+ RO (Rotate Coordinate System):
+ RO;
+
+ RR (Rectangle Relative - Filled, from current position to diagonal x,y):
+ RR x, y;
+
+ SA (Select Alternate Set):
+ SA;
+
+ SC (Scale):
+ SC {Xmin, Xmax, Ymin, Ymax};
+
+ SI (Absolute Character Size):
+ SI b, h;
+  b         [-127.9999 .. 127.9999, keine 0]
+  h         [-127.9999 .. 127.9999, keine 0]
+
+ SL (Character Slant):
+ SL {a};
+  a         [-3.5 .. -0.5, 0.5 .. 3.5]
+
+ SM (Symbol Mode):
+ SM {s};
+
+ SP (Select Pen): Selects a new pen or tool for use. If no pen number or a value of zero is given, the controller performs an EOF (end of file command). Once an EOF is performed, no motion is executed until a new IN command is received.
+ SP n;
+
+ SR (Relative Character Size):
+ SR {b, h};
+  b         [-127.9999 .. 127.9999, keine 0]
+  h         [-127.9999 .. 127.9999, keine 0]
+
+ SS (Select Standard Set):
+ SS;
+
+ TL (Tick Length):
+ TL {tp {, tm}};
+
+ UC (User Defined Character):
+ UC {i,} x1, y1, {i,} x2, y2, ... {i,} xn, yn;
+
+ VS (Velocity Select):
+ VS {v {, n}};
+  v         [1 .. 40]
+  n         [1 .. 8, je nach Ausstattung]
+
+ WG (Shade Wedge):
+ WG r, a, b {,e};
+
+ XT (X Tick):
+ XT;
+
+ YT (Y Tick):
+ YT;
+
+Comments: +
+
+Thanks to Austin Hook (austin@openbsd.org) of Milk River, Alberta, Canada for "Recommend changes for clarity, and additional commands:" related to RA, RR, EA, ER, DT, DI and DR
+We can now use our HP-plotter. Thanks!
+Forth gg HCC Holland
++
+Thank you for providing this summary
+http://www.sxlist.com/techref/language/hpgl/commands.htm
+It will be very helpful in some projects i am working on. I may submit a brief summary when it is operational. (a plotter mill)+
+sitecc at KILLspamworldonline.fr " I came with 1 question and found 1000 answers. Great! Claude Chauvet, France "
+
+Questions:
+
++
+
+lubomir.mihailov at KILLspamgmail.com asks:
+Dear Sir/Madam,
+I wish to produce HPGL file and to define my own pen color (for example "olive" = 128R|128G|0B) within, but HPGL supports only 8 pen colors (0..7). How can I do it?
+Thank you in advance.
+Sincerely yours,
+L. Mihailov
++
+
+
+bala_secure at KILLspamyahoo.com asks: " How to Draw Bezier in hpgl commands" +
+vincent.degroote at KILLspamlhoist.com asks: " What is the HPGL code to let my hp designjet 800 A0 produce long plots (more than the A0 size) ? " James Newton replies: I don't believe that HPGL can be used to define a plot that exceeds the size of the page. You would need software (e.g. printer driver or C program) that breaks up the plot into page sized chunks and produces separate HPGL for each page.+
++
+
+Comments:
+
+Very helpful indeed!
+I'm putting together a linux print/engraver interface for linux and the command break down was helpful.
+thanks+
+Very cool summary. Thanks for posting it!+
+With the death of support by HP, HPGL may become a thing of the past. It is good to see someone taking the time to document how HPGL worked. Someone, somewhere needs to commit their copy of the HPGL drivers for the various pen plotters to the HP Museum so we don't also lose the means to use these plotters. The older pen plotters, although not as good as today's plotters - are far more durable than anyone imagined. Not so the software to use them. Those are all but gone.+
+See also:
+
+Code:
