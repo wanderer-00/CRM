@@ -1,5 +1,62 @@
+main > .wrapper {
+    padding: 0 3em;
+    width: 100%;
+}
+
+.tasks {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .task {
     padding: 1em;
     border-radius: 8px;
     background-color: var(--color-block);
+}
+
+.task > div {
+    font-size: 0.8em;
+    padding: 0.2em;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    .tasks {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .tasks {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .tasks {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .tasks {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 580px) {
+    .tasks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* По надобности дописую промежуточные разрешения, если вдруг по дизайну что то падает на 650px, тогда дописую: */
+
+@media (max-width: 650) {
+
 }
