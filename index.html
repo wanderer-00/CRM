@@ -15,7 +15,6 @@
         grid-template-areas:
             "DTF DTF Ineo Ineo"
             "box ... ...  ...";
-
     }
     
     /* grid-area имена */
@@ -55,6 +54,36 @@
             width: 100%
         }
     }
+    
+    /* адаптив */
+    /* Large desktops and laptops */
+    @media (min-width: 1200px) {
+        .menu {
+            text-align: center;
+            display: grid;
+            grid-gap: 2em;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-areas:
+                "DTF DTF Ineo Ineo ... ... ... ..."
+                "DTF DTF Ineo Ineo ... ... ... ..."
+                "... ... ...  ...  ... ... ... ...";
+        }
+    }
+
+    /* Portrait tablets and medium desktops */
+    @media (min-width: 992px) and (max-width: 1199px) {}
+
+    /* Portrait tablets and small desktops */
+    @media (min-width: 768px) and (max-width: 991px) {}
+
+    /* Landscape phones and portrait tablets */
+    @media (max-width: 767px) {}
+
+    /* Landscape phones and smaller */
+    @media (max-width: 580px) {}
+
+    /* По надобности дописую промежуточные разрешения, если вдруг по дизайну что то падает на 650px, тогда дописую: */
+    @media (max-width: 650) {}
 </style>
 
 <body>
@@ -74,16 +103,16 @@
                     <div class="ico" style="background-image: url(HTML/monitoring/ineo/img/poster.png)"></div>
                 </a>
                 
-                <a class="box" id="box" href="HTML/boxes/index.html" title="Модуль упаковки">
+                <a class="box" id="" href="HTML/boxes/index.html" title="Упаковка">
                     <div class="ico" style="background-image: url(HTML/monitoring/-/storage.svg)"></div>
                 </a>
                 
-                <a class="box" id="" href="#" title="неизвестно">
-                    <div class="ico" style="background-image: url(HTML/monitoring/-/storage.svg)"></div>
+                <a class="box" id="" href="#" title="Задания">
+                    <div class="ico" style="background-image: url(HTML/task/favicon.svg)"></div>
                 </a>
                 
-                <a class="box" id="" href="#" title="неизвестно">
-                    <div class="ico" style="background-image: url(HTML/monitoring/-/storage.svg)"></div>
+                <a class="box" id="" href="#" title="Заработок">
+                    <div class="ico" style="background-image: url(HTML/money/favicon.svg)"></div>
                 </a>
                 
                 <a class="box" id="" href="#" title="неизвестно">
