@@ -14,11 +14,19 @@ main > .wrapper {
     border-radius: 8px;
     background-color: var(--color-block);
     border: 1px solid transparent;
+    position: relative;
 }
 
 .task > div {
     font-size: 0.8em;
     padding: 0.2em;
+}
+
+.status > img {
+    position: absolute;
+    top: 4px;
+    right: 4px;;
+    cursor: pointer;
 }
 
 

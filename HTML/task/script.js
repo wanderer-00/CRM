@@ -23,7 +23,7 @@ function status(s) {
 }
 
 function statusIcon(si) {
-    if      (s==0) {return "<img src='fire.svg'>"}
-    else if (s==1) {return " suspended"}
+    if      (si==0) {return "<img src='SVG/fire.svg' title='Срочный заказ'>"}
+    else if (si==1) {return "<img src='SVG/warning.svg' title='Отложенный заказ'>"}
     else    {return ""}
 }
