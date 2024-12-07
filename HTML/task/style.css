@@ -10,15 +10,30 @@ main > .wrapper {
 }
 
 .task {
-    padding: 1em;
+    padding: 0.6em 1em;
     border-radius: 8px;
     background-color: var(--color-block);
+    border: 1px solid transparent;
 }
 
 .task > div {
     font-size: 0.8em;
     padding: 0.2em;
 }
+
+
+/* статус коды (горящий(срочный), обычный, приостановленный заказ) */
+/* срочный заказ */
+.fire {
+    border: 1px solid orange;
+    background-color: rgba(255,165,0,.2);
+}
+/* приостановленный заказ */
+.suspended {
+    border: 1px solid purple;
+    background-color: rgba(128,0,128,.2);
+}
+
 
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
