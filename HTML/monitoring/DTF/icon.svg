@@ -2,32 +2,32 @@
     <defs>
         <style>
             .cls-1 {
-                fill: #c9c9c9;
+                fill: transparent;
             }
 
             .cls-2 {
-                fill: #a8a8a8;
+                fill: transparent;
             }
 
             .cls-3 {
-                fill: #444;
+                fill: transparent;
             }
 
             .cls-4 {
-                fill: #ffecc7;
+                fill: transparent;
             }
 
             .cls-5 {
-                fill: #ffd48f;
+                fill: transparent;
             }
 
             .cls-6 {
-                fill: #2d2d2d;
+                fill: transparent;
             }
 
             .cls-7 {
                 fill: none;
-                stroke: #000;
+                stroke: #5f6368;
                 stroke-linecap: round;
                 stroke-linejoin: round;
                 stroke-width: 15px;
@@ -79,5 +79,5 @@
         <line class="W" x1="440" x2="440" y1="190" y2="250"></line>
     </g>
     
-    <text x="40" y="246" class="name">DTF</text>
+    <text x="40" y="246" class="name" fill="#5f6368">DTF</text>
 </svg>

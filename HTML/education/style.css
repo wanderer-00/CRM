@@ -1,0 +1,22 @@
+.cluster {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.poster {
+    width: 100%;
+    aspect-ratio: 4/2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tag {
+    text-decoration: none;
+    color: var(--color-text);
+    display: inline-flex;
+    padding: 4px 8px;
+    margin: 10px 0;
+    background-color: var(--color-block);
+    border-radius: 4px;
+}
