@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вход в аккаунт</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Вход в аккаунт</h1>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <div class="form-note">
+            <form>
+                <div class="form-group">
+                    <input class="form-control item" type="text" name="username" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="Логин" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control item" type="password" name="Пароль" minlength="6" id="password" placeholder="Пароль" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control item" type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block create-account" type="submit">Вход в аккаунт</button>
+                </div>
+            </form>
+            <div>В этом сервисе нельзя зарегестрироваться. Данные для входа (логин и пароль) в аккаунт должна предоставить ваша компания. Вам стоит указать свою рабочую почту для получения уведомлений системы и отчётов.</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper"></div>
+    </footer>
+</body>
+<script type="text/javascript" src="../../footer.js"></script></html>

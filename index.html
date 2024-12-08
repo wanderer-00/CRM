@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css"><!-- главный файл стилей -->
 </head>
 
 <style>
+    header .wrapper {
+        display: grid;
+        grid-gap: 20px;
+        align-items: center;
+        grid-template-columns: 1fr auto;
+        
+    }
+    
+    #login img {
+        border-radius: 4px;
+        border: 1px solid transparent;
+        background-color: var(--color-block);
+        padding: 4px;
+    }
+    
+    #login img:hover {
+        border: 1px solid #343434;
+    }
+    
     .menu {
         text-align: center;
         display: grid;
@@ -89,11 +109,15 @@
 <body>
     <header>
         <div class="wrapper">
-            <h2>Модуль мониторинга</h2>
+            <h2>KOROTRON system 2.0</h2>
+            <a href="HTML/login/index.html" id="login" title="Войти в аккаунт">
+                <img src="HTML/login/favicon.svg" width="40px" height="40px;">
+            </a>
         </div>
     </header>
     <main>
         <div class="wrapper">
+           
             <div class="menu">
                 <a class="box" id="DTF" href="HTML/monitoring/DTF/index.html" title="Состояние DTF">
                     <div class="ico" style="background-image: url(HTML/monitoring/DTF/icon.svg)"></div>
@@ -115,8 +139,8 @@
                     <div class="ico" style="background-image: url(HTML/money/favicon.svg)"></div>
                 </a>
                 
-                <a class="box" id="" href="#" title="неизвестно">
-                    <div class="ico" style="background-image: url(HTML/monitoring/-/storage.svg)"></div>
+                <a class="box" id="" href="HTML/storage/index.html" title="Запас расходников">
+                    <div class="ico" style="background-image: url(HTML/storage/favicon.svg)"></div>
                 </a>
             </div>
         </div>
