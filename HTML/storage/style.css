@@ -1,21 +1,31 @@
 .cluster {
     width: 100%;
     display: grid;
-    grid-gap: 2em;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
-        "paper paper paper"
-        "toner toner toner"
-        "toner ..... ....."
+        "p270 p270 p270 p270 p170 p170 p170 p170 p105 p105 p105 p105"
+        "t0 t0 t0 t0 t1 t1 t1 t1 t2 t2 t2 t2"
+        "t3 t3 t3 t3 .. .. .. .. .. .. .. ..";
 }
+
+.paper270 {grid-area: p270}
+.paper170 {grid-area: p170}
+.paper105 {grid-area: p105}
+
+.toner0 {grid-area: t0}
+.toner1 {grid-area: t1}
+.toner2 {grid-area: t2}
+.toner3 {grid-area: t3}
 
 .element {
     text-align: center;
 }
 
-.icon {
-    aspect-ratio: 45/32;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+.toner {
+/*    transform: rotate(90deg);*/
+}
+
+svg {
+    width: 100%;
 }

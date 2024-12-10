@@ -2,7 +2,7 @@ let cluster = document.getElementsByClassName("cluster")[0];
 
 for (i = 0; i < data_paper.length; i++) {
     cluster.innerHTML += `
-<div class="element">
+<div class="element paper${data_paper[i].density}">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 32">
         <style>
             text {
@@ -10,11 +10,9 @@ for (i = 0; i < data_paper.length; i++) {
                 font: 8px sans-serif;
             }
         </style>
-        <g>
-            <polygon fill="#FFF" points="0,10 0,32 45,32 45,0 10,0 " />
-            <polygon fill="#EEE" points="0,10 10,10 10,0 " />
-            <text x="8" y="24" class="small">${data_paper[i].density} г/м²</text>
-        </g>
+        <polygon fill="#FFF" points="0,10 0,32 45,32 45,0 10,0 " />
+        <polygon fill="#EEE" points="0,10 10,10 10,0 " />
+        <text x="8" y="24" class="small">${data_paper[i].density} г/м²</text>
     </svg>
     <p>${data_paper[i].quantity} шт</p>
 </div>
@@ -23,8 +21,8 @@ for (i = 0; i < data_paper.length; i++) {
 
 for (t = 0; t < data_toner.length; t++) {
     cluster.innerHTML += `
-<div class="element" class="toner">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45000 32000">
+<div class="element toner${t}">
+<svg class="toner" xmlns="http://www.w3.org/2000/svg" viewBox="0 11000 45000 10000">
     <defs>
         <style type="text/css">
             <![CDATA[
