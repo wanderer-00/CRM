@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 32">
+    <style>
+        text {
+            fill: #BBB;
+            font: 8px sans-serif;
+        }
+    </style>
+    <g>
+        <polygon fill="#FFF" points="0,10 0,32 45,32 45,0 10,0 " />
+        <polygon fill="#EEE" points="0,10 10,10 10,0 " />
+        <text x="8" y="24" class="small">300 г/м²</text>
+    </g>
+</svg>

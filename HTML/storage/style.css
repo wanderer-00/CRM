@@ -1,0 +1,21 @@
+.cluster {
+    width: 100%;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "paper paper paper"
+        "toner toner toner"
+        "toner ..... ....."
+}
+
+.element {
+    text-align: center;
+}
+
+.icon {
+    aspect-ratio: 45/32;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
