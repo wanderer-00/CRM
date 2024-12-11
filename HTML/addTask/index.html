@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Добавить задачу</title>
@@ -11,6 +12,7 @@
     <header>
         <div class="wrapper">
             <h1>Добавление заказа</h1>
+            <p>Для отправки заказа на выполнение в любой отдел понадобиться информация о нём. Заполни эти поля и нажми кнопку "Отправить", это просто</p>
         </div>
     </header>
     <main>
@@ -20,45 +22,38 @@
                     <input type="text" name="name" id="name" required />
                     <label for="name">Заказчик</label>
                 </div>
+
                 <div class="form-example">
                     <input type="email" name="email" id="email" required />
                     <label for="email">Описание</label>
                 </div>
-                <div class="form-example">
-                    <input type="number" placeholder="кол-во" min="10" max="10000" name="email" id="email" required />
-                    <label for="email">Тираж</label>
-                </div>
-                <div class="form-example">
-                    <div>
-                        <input type="radio" name="DTF">
-                        <label for="DTF">DTF</label>
-                    </div>
 
-                    <div>
-                        <input type="radio" name="UV">
-                        <label for="UV">UV</label>
-                    </div>
-
-                    <div>
-                        <input type="radio" name="post-press">
-                        <label for="post-press">Пост-печать</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="silkscreen-printing">
-                        <label for="silkscreen-printing">Шёлкография</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="engraving">
-                        <label for="engraving">Гравировка</label>
-                    </div>
-                    
-                    <div>
-                        <input type="radio" name="MFP">
-                        <label for="MFP">Цифра</label>
-                    </div>
+                <div class="element_plusMinus" title="Тираж">
+                    <button onclick="minus()">-</button>
+                    <input class="plusMinus" type="number" placeholder="кол-во" min="1" max="123456" value="1">
+                    <button onclick="plus()">+</button>
                 </div>
+
+                <div class="departament">
+                    <input type="radio" id="A1" name="A">
+                    <label for="A1" id="DTF">DTF</label>
+
+                    <input type="radio" id="A2" name="A">
+                    <label for="A2" id="UV">UV</label>
+
+                    <input type="radio" id="A3" name="A">
+                    <label for="A3" id="engraving">Гравировка</label>
+
+                    <input type="radio" id="A4" name="A">
+                    <label for="A4" id="post-print">Пост-печать</label>
+
+                    <input type="radio" id="A5" name="A">
+                    <label for="A5">Шёлкография</label>
+
+                    <input type="radio" id="A6" name="A">
+                    <label for="A6" id="MFP">Цифровая печать</label>
+                </div>
+
                 <div class="form-example">
                     <input type="submit" value="Отправить" />
                 </div>
@@ -69,5 +64,5 @@
         <div class="wrapper"></div>
     </footer>
 </body>
-<script type="text/javascript" src="inputNumber/script.js"></script>
+<script type="text/javascript" src="+-.js"></script>
 <script type="text/javascript" src="../../footer.js"></script></html>

@@ -1,8 +1,96 @@
 .form-example input {
     color: var(--color-text);
-    margin: 1em;
+    margin: 1em 0;
     padding: 10px;
     border: 1px solid #343434;
     border-radius: 4px;
     background-color: var(--color-block);
+}
+
+.departament {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1em;
+    margin: 1em 0;
+}
+
+input[type=submit] {
+    cursor: pointer
+}
+
+/* Скрыть input radio */
+input[type=radio] {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+}
+
+.departament label {
+    padding: 0.5em;
+    cursor: pointer;
+    border: 1px solid #343434;
+    border-radius: 4px;
+}
+
+input:checked + label {
+    color: var(--color-text);
+    border-color: #343434;
+    background-color: var(--color-block)
+}
+
+
+#DTF {
+    color: orange;
+    border: 1px solid orange;
+    background-color: rgba(255,165,0,.2);
+}
+
+#UV {
+    color: purple;
+    border: 1px solid purple;
+    background-color: rgba(128,0,128,.2);
+}
+
+#MFP {
+    color: royalblue;
+    border: 1px solid royalblue;
+    background-color: rgba(65,105,225,.2);
+}
+
+#engraving {
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,.1);
+}
+
+#post-print {
+    color: forestgreen;
+    border: 1px solid forestgreen;
+    background-color: rgba(34,139,34,.2);
+}
+
+/* plusMinus */
+/* Конструкция */
+/* Убрать кнопки увеличения и уменьшения в input number */
+/* Chrome, Safari, Edge, Opera */
+.element_plusMinus button {
+    color: red;
+    background-color: transparent;
+    border: none;
+    font-size: 1.3em;
+    cursor: pointer
+}
+
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    text-align: center;
+    -moz-appearance: textfield;
 }
