@@ -1,0 +1,8 @@
+.form-example input {
+    color: var(--color-text);
+    margin: 1em;
+    padding: 10px;
+    border: 1px solid #343434;
+    border-radius: 4px;
+    background-color: var(--color-block);
+}
