@@ -19,12 +19,14 @@ input[type=submit] {
 }
 
 /* Скрыть input radio */
+/*
 input[type=radio] {
     width: 0;
     height: 0;
     position: absolute;
     opacity: 0;
 }
+*/
 
 .departament label {
     padding: 0.5em;
