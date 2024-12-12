@@ -19,14 +19,12 @@ input[type=submit] {
 }
 
 /* Скрыть input radio */
-/*
 input[type=radio] {
     width: 0;
     height: 0;
     position: absolute;
     opacity: 0;
 }
-*/
 
 .departament label {
     padding: 0.5em;
@@ -77,7 +75,7 @@ input:checked + label {
 /* Убрать кнопки увеличения и уменьшения в input number */
 /* Chrome, Safari, Edge, Opera */
 .element_plusMinus button {
-    color: red;
+    color: white;
     background-color: transparent;
     border: none;
     font-size: 1.3em;
