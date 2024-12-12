@@ -1,3 +1,11 @@
+/* Скрыть input radio */
+input[type=radio] {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+}
+
 .form-example input {
     color: var(--color-text);
     margin: 1em 0;
@@ -14,16 +22,9 @@
     margin: 1em 0;
 }
 
-input[type=submit] {
+input[type=submit],
+button {
     cursor: pointer
-}
-
-/* Скрыть input radio */
-input[type=radio] {
-    width: 0;
-    height: 0;
-    position: absolute;
-    opacity: 0;
 }
 
 .departament label {
@@ -33,7 +34,8 @@ input[type=radio] {
     border-radius: 4px;
 }
 
-input:checked + label {
+input:checked + label,
+textarea {
     color: var(--color-text);
     border-color: #343434;
     background-color: var(--color-block)
