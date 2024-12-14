@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HPGL документация</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Документация HPGL</h1>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <h2>Пример резки по меткам на листе формата SRA3</h2>
+<pre>$IN;CMD:307,100,100,17000,11800;
+PU;
+SP1;
+PU624 3058;
+PD3135 3058;PD3184 3053;PD3230 3039;PD3271 3016;
+PD3307 2986;PD3337 2950;PD3360 2909;PD3374 2863;
+PD3379 2814;PD3379 903;PD3374 854;PD3360 808;
+PD3337 766;PD3307 730;PD3271 700;PD3230 678;
+PD3184 663;PD3135 658;PD624 658;PD574 663;
+PD529 678;PD487 700;PD451 730;PD421 766;
+PD398 808;PD384 854;PD379 903;PD379 2814;
+PD384 2863;PD398 2909;PD421 2950;PD451 2986;
+PD487 3016;PD529 3039;PD574 3053;PD624 3058;
+PU;
+SP1;
+PU19199,0;
+!PG;;#
+</pre>
+ 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1000 -1000 22000 14000" fill="#FFF">
+                <rect x="0" y="0" width="17000" height="11800" fill="gray"/>
+                <polyline points="624 3058 3135 3058 3184 3053 3230,3039 3271 3016 3307 2986 3337 2950 3360 2909 3374 2863 3379 2814 3379 903 3374 854 3360 808 3337 766 3307 730 3271 700 3230 678 3184 663 3135 658 624 658 574 663 529 678 487 700 451 730 421 766 398 808 384 854 379 903 379 2814 384 2863 398 2909 421 2950 451 2986 487 3016 529 3039 574 3053 624 3058" style="fill:none;stroke:#FFF;stroke-width:100" />
+                <circle r="100" cx="624" cy="3058" fill="green"/>
+                <circle r="100" cx="19199" cy="0" fill="red"/>
+            </svg>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper"></div>
+    </footer>
+</body>
+<script type="text/javascript" src="../../footer.js"></script>
+</html>

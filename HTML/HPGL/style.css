@@ -1,0 +1,10 @@
+pre {
+    padding: 1em;
+    background-color: var(--color-block);
+    border-radius: 8px;
+}
+
+svg {
+    width: 500px;
+    border: 1px solid red;
+}
