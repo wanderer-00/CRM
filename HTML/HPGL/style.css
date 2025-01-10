@@ -5,7 +5,14 @@ pre {
 }
 
 svg {
-    width: 500px;
-    border: 1px solid red;
+    width: 50%;
+    background-color: #027DEE;
     transform: scaleY(-1);
+    background-image: url(img/blueprint_paper.jpg);
+}
+
+@media (orientation: portrait) {
+    svg {
+        width: 100%;
+    }
 }

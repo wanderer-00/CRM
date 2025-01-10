@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="25.0095mm" height="90.2581mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2493.38 8998.5"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#2B2A29;stroke-width:19.94;stroke-miterlimit:22.9256}
+    .fil2 {fill:#FEFEFE}
+    .fil0 {fill:#D9DADA}
+    .fil1 {fill:#9D9E9E}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1528307432000">
+   <rect class="fil0 str0" x="395.45" y="964.06" width="1702.47" height="948.64"/>
+   <rect class="fil1 str0" x="718.79" y="1912.71" width="1055.79" height="203.56"/>
+   <rect class="fil1 str0" x="542.03" y="2116.27" width="1409.32" height="244.59"/>
+   <rect class="fil0 str0" x="246.44" y="2360.86" width="2000.47" height="501.5"/>
+   <rect class="fil1 str0" x="364.3" y="2862.35" width="1764.76" height="703.36"/>
+   <rect class="fil1 str0" x="9.96" y="3565.7" width="2473.44" height="194.98"/>
+   <rect class="fil1 str0" x="346.19" y="3760.68" width="1813.18" height="2128.09"/>
+   <path class="fil1 str0" d="M1018.2 964.06l456.97 0 0 -725.6c0,-126.19 -102.3,-228.49 -228.49,-228.5 -126.19,0.01 -228.5,102.31 -228.49,228.5l0 725.6z"/>
+   <path class="fil1 str0" d="M1938.77 8279.94l0 -2024.61 208.42 -366.56 -1800.99 0 208.42 366.56 0 2024.61c0,297.33 309.85,538.37 692.08,538.37 382.23,0 692.08,-241.04 692.08,-538.37z"/>
+   <polygon class="fil2 str0" points="1123.52,8809.8 1354.26,8811.85 1246.69,8980.74 "/>
+  </g>
+ </g>
+</svg>

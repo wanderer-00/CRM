@@ -1,14 +1,21 @@
 :root {
-    --color-background: #0D0D0D;   /* цвет фона сайта */
-    --color-block: #1F1F1F;        /* цвет фона блоков */
-    --color-text: #FFF;            /* цвет текста */
-    --color-main: #456AFF;         /* акцентный цвет */
-    
+    --color-background: #0D0D0D;
+    /* цвет фона сайта */
+    --color-block: #1F1F1F;
+    /* цвет фона блоков */
+    --color-text: #FFF;
+    /* цвет текста */
+    --color-main: #456AFF;
+    /* акцентный цвет */
+
     /* цвета представления данных */
-    --color-true: #367E4A;  /* прибыль */
-    --color-alert: #C4CA5A; /* предупреждение */
-    --color-false: #844343; /* убыток */
-    
+    --color-true: #367E4A;
+    /* прибыль */
+    --color-alert: #C4CA5A;
+    /* предупреждение */
+    --color-false: #844343;
+    /* убыток */
+
     /* цвета чернил CMYK + W */
     --color-cyan: ;
     --color-magenta: ;
@@ -43,7 +50,10 @@ body {
 }
 
 /* прижимает footer к низу страницы */
-html {height: 100%}
+html {
+    height: 100%
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -51,6 +61,17 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
+
 /*----------------------------------*/
 
-main, footer {padding: 1em 0}
+main,
+footer {
+    padding: 1em 0
+}
+
+@media (orientation:portrait) {
+    .wrapper {
+        width: 100%;
+        padding: 0 1em;
+    }
+}
