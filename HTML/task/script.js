@@ -7,6 +7,7 @@ for(i=0; i<task.length; i++){
         <div class="work">${task[i].WORK}</div>
         <div class="client">${task[i].CLIENT}</div>
         <div class="product">${task[i].PRODUCT}</div>
+        <div>Цвет: <div style="display: inline-block; border: 1px solid #FFF; border-radius:50%; background-color:${task[i].COLOR}; height: 14px; width: 14px"></div></div>
         <div class="article">${task[i].ARTICLE}</div>
         <div class="quantity">${task[i].QUANTITY} шт.</div>
         <div class="term">${task[i].TERM}</div>
