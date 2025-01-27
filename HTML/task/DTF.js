@@ -1,30 +1,5 @@
 let task = [
     {
-        "WORK": "НАС657",
-        "CLIENT": "Ремарк",
-        "PRODUCT": "Худи унисекс STAN футер",
-        "COLOR": "red",
-        "ARTICLE": "СТ44667",
-        "QUANTITY": "15",
-        "DEPARTMENT": "DTF",
-        "TERM": "27.01.25",
-        "NOTE": " ",
-        "STATUS": 0,
-    },
-    {
-        "WORK": "НАС657",
-        "CLIENT": "Ремарк",
-        "PRODUCT": "Худи унисекс STAN футер",
-        "COLOR": "#001E36",
-        "ARTICLE": "СТ45127",
-        "QUANTITY": "15",
-        "DEPARTMENT": "DTF",
-        "TERM": "27.01.25",
-        "NOTE": " ",
-        "STATUS": 0,
-    },
-
-    {
         "WORK": "НЭД4252",
         "CLIENT": "Теребро",
         "PRODUCT": "Бейсболка Standart",
@@ -34,6 +9,7 @@ let task = [
         "DEPARTMENT": "DTF",
         "TERM": "28.01.25",
         "NOTE": " ",
+        "STATUS": 0,
     },
 
     {
@@ -46,29 +22,42 @@ let task = [
         "DEPARTMENT": "DTF",
         "TERM": "28.01.25",
         "NOTE": " ",
+        "STATUS": 0,
     },
 
     {
-        "WORK": " ",
-        "CLIENT": "Гафиятуллина Э. Я.",
-        "PRODUCT": "Сумка для обуви",
-        "COLOR": "gray",
-        "ARTICLE": " ",
-        "QUANTITY": "1",
+        "WORK": "",
+        "CLIENT": "Ремарк",
+        "PRODUCT": "Рюкзак",
+        "COLOR": "darkblue",
+        "ARTICLE": "ХЭ16111/25",
+        "QUANTITY": "10",
         "DEPARTMENT": "DTF",
-        "TERM": "27.01.25",
-        "NOTE": " ",
+        "TERM": "29.01.25",
+        "NOTE": "",
     },
 
     {
-        "WORK": " ",
-        "CLIENT": "Гафиятуллина Э. Я.",
-        "PRODUCT": "Сумка для обуви",
-        "COLOR": "blue",
-        "ARTICLE": " ",
-        "QUANTITY": "1",
+        "WORK": "",
+        "CLIENT": "Ремарк",
+        "PRODUCT": "Футболка",
+        "COLOR": "white",
+        "ARTICLE": "ОА408001",
+        "QUANTITY": "8",
         "DEPARTMENT": "DTF",
-        "TERM": "27.01.25",
+        "TERM": "29.01.25",
+        "NOTE": "",
+    },
+
+    {
+        "WORK": "",
+        "CLIENT": "Ремарк",
+        "PRODUCT": "Футболка",
+        "COLOR": "white",
+        "ARTICLE": "ОА407001",
+        "QUANTITY": "2",
+        "DEPARTMENT": "DTF",
+        "TERM": "29.01.25",
         "NOTE": "",
     },
 
@@ -84,6 +73,4 @@ let task = [
         "NOTE": "Комментарий к заказу",
         "STATUS": 1,
     },
-
-
 ]
