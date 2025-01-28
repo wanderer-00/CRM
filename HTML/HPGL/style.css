@@ -11,6 +11,19 @@ svg {
     background-image: url(img/blueprint_paper.jpg);
 }
 
+input {
+    width: 100px;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+button {
+    padding: 6px 8px;
+    margin: 1em 0;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
 @media (orientation: portrait) {
     svg {
         width: 100%;

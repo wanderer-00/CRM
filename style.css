@@ -37,6 +37,15 @@ footer {background: green}
     box-sizing: border-box;
 }
 
+input,
+button {
+    color: var(--color-text);
+    margin: 0.1em 0;
+    padding: 10px;
+    border: 1px solid #343434;
+    background-color: var(--color-block);
+}
+
 body {
     color: var(--color-text);
     font-family: sans-serif;

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="wrapper">
@@ -15,21 +16,28 @@
     </header>
     <main>
         <div class="wrapper">
-            <p>HPGL (иногда пишут HP-GL) является основным языком управления принтерами, используемым плоттерами <a href="https://ru.wikipedia.org/wiki/Hewlett-Packard">Hewlett-Packard</a>. Его название представляет собой аббревиатуру Hewlett-Packard Graphics Language. В данный момент он является стандартным почти для всех плоттеров. Принтеры Hewlett-Packard, как правило, также поддерживают HPGL наравне с PCL.</p>
+            <p>HPGL (иногда пишут HP-GL) является основным языком управления принтерами, используемым плоттерами <a href="https://ru.wikipedia.org/wiki/Hewlett-Packard">Hewlett-Packard</a>. Его название представляет собой аббревиатуру Hewlett-Packard Graphics Language. В данный момент он является стандартным почти для всех плоттеров. Принтеры Hewlett-Packard, как правило, также поддерживают HPGL наравне с PCL. Значения расчитываются в минимальном, </p>
+            
+            <h2>Описание некоторых команд языка</h2>
+            <p>Команды языка представляют собой сочетание кода из двух букв и следующих за ним дополнительных параметров. Каждая команда заканчивается точкой с запятой. Координаты пера задаются в наименьших единицах, поддерживаемых плоттерами производства HP — 25 мкм (то есть 40 единиц на миллиметр, 1016 на дюйм) и задаются числами с плавающей точкой (запятой) в пределах ±2<sup>30</sup>. Перечисление координат и других параметров, указанных в качестве параметра команды разделяются запятой, пробелы после запятой и кода команды необязательны, эквивалентно, например, PA 0, 0; и PA0,0.</p>
             
             <h1>Команды</h1>
             <table>
+                <tr>
+                    <td><a href="#CMD">CMD</a></td>
+                    <td>Считывание меток</td>
+                </tr>
                 <tr>
                     <td><a href="#">DF</a></td>
                     <td>Установка по умолчанию</td>
                 </tr>
                 <tr>
                     <td><a href="#">IN</a></td>
-                    <td>Инициализация установки</td>
+                    <td>Инициализация процесса черчения</td>
                 </tr>
                 <tr>
                     <td>IP</td>
-                    <td>Точка масштабирования</td>
+                    <td>Определяет начальную точку, в данном случае по умолчанию 0,0</td>
                 </tr>
                 <tr>
                     <td>SC</td>
@@ -65,12 +73,13 @@
                 </tr>
 
             </table>
-            
+
             <h2 id="PU">PU (Подъем пера)</h2>
             <p>Поднимает активное перо со стола</p>
-            
+
             <h2>Пример резки по меткам на листе формата SRA3</h2>
-<pre>$IN;CMD:307,100,100,17000,11800;
+            <pre>$IN;
+CMD:307,100,100,17000,11800;
 PU;
 SP1;
 PU624 3058;
@@ -89,18 +98,75 @@ PU19199,0;
 !PG;;#
 </pre>
             <svg title="Вид на стол сверху" xmlns="http://www.w3.org/2000/svg" viewBox="-1000 -1000 22000 14000" fill="#FFF">
-                <rect x="0" y="0" width="17000" height="11800" fill="white"/>
+                <rect x="0" y="0" width="17000" height="11800" fill="white" />
                 <polyline points="624 3058 3135 3058 3184 3053 3230,3039 3271 3016 3307 2986 3337 2950 3360 2909 3374 2863 3379 2814 3379 903 3374 854 3360 808 3337 766 3307 730 3271 700 3230 678 3184 663 3135 658 624 658 574 663 529 678 487 700 451 730 421 766 398 808 384 854 379 903 379 2814 384 2863 398 2909 421 2950 451 2986 487 3016 529 3039 574 3053 624 3058" style="fill:none;stroke:#000;stroke-width:100" />
-                <circle r="100" cx="624" cy="3058" fill="green"/>
-                <circle r="100" cx="19199" cy="0" fill="red"/>
+                <circle r="100" cx="624" cy="3058" fill="green" />
+                <circle r="100" cx="19199" cy="0" fill="red" />
             </svg>
-            
+
             <img src="img/knife_cutter.svg">
+
+
+            <hr>
+            <div class="cmd">
+                <h2 id="CMD">Расчёт CMD</h2>
+                <p>Синтаксис команды CMD:307,100,100,17000,11800;</p>
+                <input type="number" value="307">
+                <input type="number">
+                <lable>Неизвестное значение</lable><br>
+                <input type="number" value="100">
+                <input type="number">
+                <lable>r метки</lable><br>
+                <input type="number" value="100">
+                <input type="number">
+                <lable>r метки</lable><br>
+                <input type="number" value="17000">
+                <input type="number">
+                <lable>Растояние X</lable><br>
+                <input type="number" value="11800">
+                <input type="number">
+                <lable>Растояние Y</lable><br>
+                <button id="cmdResult">Расчитать</button>
+            </div>
+
+            <script type="text/javascript">
+                let cmdResult = document.getElementById('cmdResult');
+                let cmd = document.getElementsByClassName('cmd')[0];
+                console.log(cmd);
+
+                cmdResult.onclick = myFunction;
+
+                function myFunction() {
+                    for (i = 0; i < 10; i = i + 2) {
+                        let a = document.getElementsByTagName('input')[i].value;
+                        let b = document.getElementsByTagName('input')[i + 1].value = a / 40;
+                        console.log(b);
+                    }
+                }
+            </script>
+
+            <svg title="Вид на стол сверху" xmlns="http://www.w3.org/2000/svg" viewBox="-1000 -1000 22000 14000" fill="#FFF">
+                <rect x="0" y="0" width="17000" height="11800" fill="white" />
+                <polyline points="624 3058 3135 3058 3184 3053 3230,3039 3271 3016 3307 2986 3337 2950 3360 2909 3374 2863 3379 2814 3379 903 3374 854 3360 808 3337 766 3307 730 3271 700 3230 678 3184 663 3135 658 624 658 574 663 529 678 487 700 451 730 421 766 398 808 384 854 379 903 379 2814 384 2863 398 2909 421 2950 451 2986 487 3016 529 3039 574 3053 624 3058" style="fill:none;stroke:#000;stroke-width:100" />
+                <circle r="100" cx="624" cy="3058" fill="green" />
+                <circle r="100" cx="19199" cy="0" fill="red" />
+
+                <!-- Mark dots -->
+                <g class="marks" fill="black">
+                    <circle r="100" cx="500" cy="500" />
+                    <circle r="100" cx="500" cy="11300" />
+                    <circle r="100" cx="16500" cy="11300" />
+                    <circle r="100" cx="16500" cy="500" />
+                </g>
+
+                <!-- Red border -->
+                <polyline points="0,640 0,11160 640,11160 640,11800 16360,11800 16360,11160 17000,11160 17000,640 16360,640 16360,0 640,0 640,640 0,640" fill="none" stroke="red" stroke-width="40" />
+            </svg>
+
         </div>
     </main>
     <footer>
         <div class="wrapper"></div>
     </footer>
 </body>
-<script type="text/javascript" src="../../footer.js"></script>
-</html>
+<script type="text/javascript" src="../../footer.js"></script></html>
