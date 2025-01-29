@@ -1,31 +1,5 @@
 let task = [
     {
-        "WORK": "НЭД4252",
-        "CLIENT": "Теребро",
-        "PRODUCT": "Бейсболка Standart",
-        "COLOR": "black",
-        "ARTICLE": "ПР15847,3",
-        "QUANTITY": "50",
-        "DEPARTMENT": "DTF",
-        "TERM": "28.01.25",
-        "NOTE": " ",
-        "STATUS": 0,
-    },
-
-    {
-        "WORK": "НЭД4252",
-        "CLIENT": "Теребро",
-        "PRODUCT": "Футболка мужская IMPERIAL",
-        "COLOR": "black",
-        "ARTICLE": "ХЭ711500.309/L",
-        "QUANTITY": "50",
-        "DEPARTMENT": "DTF",
-        "TERM": "28.01.25",
-        "NOTE": " ",
-        "STATUS": 0,
-    },
-
-    {
         "WORK": "",
         "CLIENT": "Ремарк",
         "PRODUCT": "Рюкзак",
@@ -35,6 +9,7 @@ let task = [
         "DEPARTMENT": "DTF",
         "TERM": "29.01.25",
         "NOTE": "",
+        "STATUS": 0,
     },
 
     {
@@ -47,6 +22,7 @@ let task = [
         "DEPARTMENT": "DTF",
         "TERM": "29.01.25",
         "NOTE": "",
+        "STATUS": 0,
     },
 
     {
@@ -59,6 +35,31 @@ let task = [
         "DEPARTMENT": "DTF",
         "TERM": "29.01.25",
         "NOTE": "",
+        "STATUS": 0,
+    },
+
+    {
+        "WORK": "НЭД4252",
+        "CLIENT": "Теребро",
+        "PRODUCT": "Бейсболка Standart",
+        "COLOR": "black",
+        "ARTICLE": "ПР15847,3",
+        "QUANTITY": "50",
+        "DEPARTMENT": "DTF",
+        "TERM": "03.02.25",
+        "NOTE": " ",
+    },
+
+    {
+        "WORK": "НЭД4252",
+        "CLIENT": "Теребро",
+        "PRODUCT": "Футболка мужская IMPERIAL",
+        "COLOR": "black",
+        "ARTICLE": "ХЭ711500.309/L",
+        "QUANTITY": "50",
+        "DEPARTMENT": "DTF",
+        "TERM": "03.02.25",
+        "NOTE": " ",
     },
 
     {
