@@ -1,4 +1,4 @@
-let task = [
+let task_DTF = [
     {
         "WORK": "СКА4759",
         "CLIENT": "Bala City",
@@ -13,15 +13,41 @@ let task = [
     },
 
     {
-        "WORK": "№ 123",
-        "CLIENT": "Клиент",
-        "PRODUCT": "Продукт и его цвет:",
-        "COLOR": "orange",
-        "ARTICLE": "ПР12345",
-        "QUANTITY": "10",
+        "WORK": "РС5623",
+        "CLIENT": "Оргсинтез",
+        "PRODUCT": "Сумка светоотражающая",
+        "COLOR": "gray",
+        "ARTICLE": "ОА887157",
+        "QUANTITY": "8",
         "DEPARTMENT": "DTF",
-        "TERM": "01.01.25",
-        "NOTE": "Комментарий к заказу",
-        "STATUS": 1,
+        "TERM": "04.02.25",
+        "NOTE": "",
+        "STATUS": null,
     },
+    
+    {
+        "WORK": "РС5623",
+        "CLIENT": "Оргсинтез",
+        "PRODUCT": "Сумка светоотражающая",
+        "COLOR": "#CDE092",
+        "ARTICLE": "ПР16497,9",
+        "QUANTITY": "8",
+        "DEPARTMENT": "DTF",
+        "TERM": "06.02.25",
+        "NOTE": "",
+        "STATUS": null,
+    },
+
+//    {
+//        "WORK": "№ 123",
+//        "CLIENT": "Клиент",
+//        "PRODUCT": "Продукт и его цвет:",
+//        "COLOR": "orange",
+//        "ARTICLE": "ПР12345",
+//        "QUANTITY": "10",
+//        "DEPARTMENT": "DTF",
+//        "TERM": "01.01.25",
+//        "NOTE": "Комментарий к заказу",
+//        "STATUS": 1,
+//    },
 ]
