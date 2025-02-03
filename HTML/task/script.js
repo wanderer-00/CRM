@@ -1,5 +1,6 @@
 let tasks = document.getElementsByClassName('tasks')[0];
 
+// создание карточек с заданиями
 for(i=0; i<task.length; i++){
     tasks.innerHTML += 
     `
@@ -17,6 +18,7 @@ for(i=0; i<task.length; i++){
     `;
 }
 
+// присвоение статуса работе
 function status(s) {
     if      (s==0) {return " fire"}
     else if (s==1) {return " suspended"}
