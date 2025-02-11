@@ -1,39 +1,39 @@
 let task_DTF = [
-    {
-        "WORK":         "",
-        "CLIENT":       "Глобус",
-        "PRODUCT":      "Мешок с головоломкой",
-        "COLOR":        "gray",
-        "ARTICLE":      "ОА19544809",
-        "QUANTITY":     "30",
-        "TERM":         "10.02.25 9:00",
-        "NOTE":         "",
-        "STATUS": 0,
-    },
-
-    {
-        "WORK":         "",
-        "CLIENT":       "Щёкиназот",
-        "PRODUCT":      "Лейбл",
-        "COLOR":        "#343434",
-        "ARTICLE":      "ПР13943,13",
-        "QUANTITY":     "20",
-        "TERM":         "11.02.25 9:00",
-        "NOTE":         "",
-        "STATUS": 2,
-    },
-
-    {
-        "WORK":         "",
-        "CLIENT":       "Логикам",
-        "PRODUCT":      "Нессер",
-        "COLOR":        "darkred",
-        "ARTICLE":      "ПР13922,55",
-        "QUANTITY":     "75",
-        "TERM":         "11.02.25 9:00",
-        "NOTE":         "",
-        "STATUS": 2,
-    },
+//    {
+//        "WORK":         "",
+//        "CLIENT":       "Глобус",
+//        "PRODUCT":      "Мешок с головоломкой",
+//        "COLOR":        "gray",
+//        "ARTICLE":      "ОА19544809",
+//        "QUANTITY":     "30",
+//        "TERM":         "10.02.25 9:00",
+//        "NOTE":         "",
+//        "STATUS": 0,
+//    },
+//
+//    {
+//        "WORK":         "",
+//        "CLIENT":       "Щёкиназот",
+//        "PRODUCT":      "Лейбл",
+//        "COLOR":        "#343434",
+//        "ARTICLE":      "ПР13943,13",
+//        "QUANTITY":     "20",
+//        "TERM":         "11.02.25 9:00",
+//        "NOTE":         "",
+//        "STATUS": 2,
+//    },
+//
+//    {
+//        "WORK":         "",
+//        "CLIENT":       "Логикам",
+//        "PRODUCT":      "Нессер",
+//        "COLOR":        "darkred",
+//        "ARTICLE":      "ПР13922,55",
+//        "QUANTITY":     "75",
+//        "TERM":         "11.02.25 9:00",
+//        "NOTE":         "",
+//        "STATUS": 2,
+//    },
 
     {
         "WORK":         "",
@@ -44,7 +44,7 @@ let task_DTF = [
         "QUANTITY":     "51",
         "TERM":         "11.02.25 9:00",
         "NOTE":         "",
-        "STATUS": 2,
+        "STATUS": 0,
     },
 
 //    {
