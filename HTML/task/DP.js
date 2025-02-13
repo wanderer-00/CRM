@@ -87,18 +87,6 @@ let task_DP = [
         "PRODUCT":  "открытка",
         "MATERIAL": "M270",
         "ARTICLE":  "реинд",
-        "QUANTITY": "8",
-        "TERM":     "13.02.25",
-        "NOTE":     "",
-        "STATUS":   0,
-    },
-
-    {
-        "WORK":     "НАС707",
-        "CLIENT":   "Ремарк",
-        "PRODUCT":  "открытка",
-        "MATERIAL": "M270",
-        "ARTICLE":  "реинд",
         "QUANTITY": "12",
         "TERM":     "13.02.25",
         "NOTE":     "",
