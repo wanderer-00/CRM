@@ -131,4 +131,15 @@ let task_DTF = [
         "NOTE":         "",
         "STATUS": 0,
     },
+    {
+        "WORK":         "СЮ960",
+        "CLIENT":       "Рокада Мед",
+        "PRODUCT":      "Пенал",
+        "COLOR":        "gray",
+        "ARTICLE":      "ОА318915",
+        "QUANTITY":     "150",
+        "TERM":         "14.02.25",
+        "NOTE":         "",
+        "STATUS": 2,
+    },
 ]
