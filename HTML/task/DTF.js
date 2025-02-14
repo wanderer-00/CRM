@@ -1,28 +1,5 @@
 let task_DTF = [
     {
-        "WORK":         "СЮ942",
-        "CLIENT":       "ACE LA",
-        "PRODUCT":      "Головоломка",
-        "COLOR":        "#BEB375",
-        "ARTICLE":      "ОА19544809",
-        "QUANTITY":     "10",
-        "TERM":         "13.02.25",
-        "NOTE":         "",
-        "STATUS": 0,
-    },
-
-    {
-        "WORK":         "СЮ942",
-        "CLIENT":       "ACE LA",
-        "PRODUCT":      "Головоломка",
-        "COLOR":        "#BEB375",
-        "ARTICLE":      "ОА543408",
-        "QUANTITY":     "15",
-        "TERM":         "13.02.25",
-        "NOTE":         "",
-        "STATUS": 0,
-    },
-    {
         "WORK":         "СЮ960",
         "CLIENT":       "Рокада Мед",
         "PRODUCT":      "Пенал",
@@ -36,24 +13,24 @@ let task_DTF = [
     {
         "WORK":         "СЮ942",
         "CLIENT":       "ACE LA",
-        "PRODUCT":      "Рюкзак",
-        "COLOR":        "yellow",
-        "ARTICLE":      "ХЭ16108/03",
-        "QUANTITY":     "10",
-        "TERM":         "13.02.25",
-        "NOTE":         "Жёлтый на жёлтом",
-        "STATUS": 1,
-    },
-
-    {
-        "WORK":         "СЮ942",
-        "CLIENT":       "ACE LA",
         "PRODUCT":      "Пенал",
         "COLOR":        "red",
         "ARTICLE":      "ОА369501",
         "QUANTITY":     "10",
         "TERM":         "13.02.25",
-        "NOTE":         "Нет макета под печать",
-        "STATUS": 1,
+        "NOTE":         "",
+        "STATUS": 0,
     },
+//    {
+//        "WORK":         "",
+//        "CLIENT":       "",
+//        "PRODUCT":      "",
+//        "COLOR":        "",
+//        "ARTICLE":      "",
+//        "QUANTITY":     "",
+//        "TERM":         "13.02.25",
+//        "NOTE":         "",
+//        "STATUS": 2,
+//    },
+
 ]

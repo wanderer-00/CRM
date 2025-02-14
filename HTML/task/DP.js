@@ -1,16 +1,15 @@
 let task_DP = [
     {
-        "WORK":     "ДХ6685",
-        "CLIENT":   "ТракРесурс Регион",
-        "PRODUCT":  "Ароматический набор",
+        "WORK":     "",
+        "CLIENT":   "ТЕКО",
+        "PRODUCT":  "Блокнот",
         "MATERIAL": "M270",
-        "ARTICLE":  "ОА445004",
-        "QUANTITY": "10",
+        "ARTICLE":  "ТАТСКА4799.0001",
+        "QUANTITY": "100",
         "TERM":     "14.02.25",
-        "NOTE":     "",
-        "STATUS":   2,
+        "NOTE":     "Переднюю и заднюю обложку",
+        "STATUS":   0,
     },
-
     {
         "WORK":     "",
         "CLIENT":   "Rocada Med",
@@ -22,4 +21,15 @@ let task_DP = [
         "NOTE":     "нет визуализации",
         "STATUS":   1,
     },
+//    {
+//        "WORK":     "",
+//        "CLIENT":   "",
+//        "PRODUCT":  "",
+//        "MATERIAL": "",
+//        "ARTICLE":  "",
+//        "QUANTITY": "",
+//        "TERM":     "",
+//        "NOTE":     "",
+//        "STATUS":   2,
+//    },
 ]
