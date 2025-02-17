@@ -1,0 +1,104 @@
+header .wrapper {
+    display: grid;
+    grid-gap: 1em;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+
+}
+
+#login img {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: var(--color-block);
+    padding: 4px;
+}
+
+#login img:hover {
+    border: 1px solid #343434;
+}
+
+#menu {
+    text-align: center;
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "DTF DTF Ineo Ineo"
+        "box ... ...  ...";
+}
+
+/* grid-area имена */
+#DTF {
+    grid-area: DTF
+}
+
+#Ineo {
+    grid-area: Ineo
+}
+
+#box {
+    grid-area: box
+}
+
+.box {
+    padding: 1em;
+    background-color: #1F1F1F;
+    border-radius: 1em;
+}
+
+#menu > a {
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#menu > a:hover {
+    border: 1px solid #343434
+}
+
+.ico {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (orientation:portrait) {
+    body {
+        font-size: 48px
+    }
+
+    .wrapper {
+        width: 100%
+    }
+}
+
+/* адаптив */
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    #menu {
+        text-align: center;
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+            "DTF DTF Ineo Ineo ... ... ... ..."
+            "DTF DTF Ineo Ineo ... ... ... ..."
+            "... ... ...  ...  ... ... ... ...";
+    }
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {}
+
+/* Landscape phones and smaller */
+@media (max-width: 580px) {}
+
+/* По надобности дописую промежуточные разрешения, если вдруг по дизайну что то падает на 650px, тогда дописую: */
+@media (max-width: 650) {}
