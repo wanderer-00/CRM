@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            border: 1px solid red
+        }
+        
+        model-viewer {
+            width: 500px;
+            height: auto;
+            aspect-ratio: 2/3;
+        }
+    </style>
+
+<body>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <!-- Use it like any other HTML element -->
+    <model-viewer alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum" src="NeilArmstrong1.glb" ar environment-image="moon_1k.hdr"  shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+</body>
+
+</html>
