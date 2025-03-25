@@ -1,6 +1,6 @@
 header .wrapper {
     display: grid;
-    grid-gap: 1em;
+    grid-gap: 1rem;
     align-items: center;
     grid-template-columns: auto 1fr auto;
 
@@ -20,11 +20,28 @@ header .wrapper {
 #menu {
     text-align: center;
     display: grid;
-    grid-gap: 2em;
+    grid-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
         "DTF DTF Ineo Ineo"
         "box ... ...  ...";
+}
+
+#menu > a {
+    border: 1px solid transparent;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+#menu > a:hover {
+    border: 1px solid #343434
+}
+
+.ico {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* grid-area имена */
@@ -43,31 +60,12 @@ header .wrapper {
 .box {
     padding: 1em;
     background-color: #1F1F1F;
-    border-radius: 1em;
+    border-radius: 1rem;
 }
 
-#menu > a {
-    border: 1px solid transparent;
-    padding: 10px;
-    border-radius: 8px;
-}
 
-#menu > a:hover {
-    border: 1px solid #343434
-}
-
-.ico {
-    width: 100%;
-    aspect-ratio: 1/1;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 
 @media (orientation:portrait) {
-    body {
-        font-size: 48px
-    }
-
     .wrapper {
         width: 100%
     }
@@ -89,16 +87,16 @@ header .wrapper {
 }
 
 /* Portrait tablets and medium desktops */
-@media (min-width: 992px) and (max-width: 1199px) {}
+/*@media (min-width: 992px) and (max-width: 1199px) {}*/
 
 /* Portrait tablets and small desktops */
-@media (min-width: 768px) and (max-width: 991px) {}
+/*@media (min-width: 768px) and (max-width: 991px) {}*/
 
 /* Landscape phones and portrait tablets */
-@media (max-width: 767px) {}
+/*@media (max-width: 767px) {}*/
 
 /* Landscape phones and smaller */
-@media (max-width: 580px) {}
+/*@media (max-width: 580px) {}*/
 
 /* По надобности дописую промежуточные разрешения, если вдруг по дизайну что то падает на 650px, тогда дописую: */
-@media (max-width: 650) {}
+/*@media (max-width: 650) {}*/
