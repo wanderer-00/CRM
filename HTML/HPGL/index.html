@@ -28,28 +28,8 @@
                     <td>Считывание меток</td>
                 </tr>
                 <tr>
-                    <td><a href="#">DF</a></td>
-                    <td>Установка по умолчанию</td>
-                </tr>
-                <tr>
                     <td><a href="#">IN</a></td>
                     <td>Инициализация процесса черчения</td>
-                </tr>
-                <tr>
-                    <td>IP</td>
-                    <td>Определяет начальную точку, в данном случае по умолчанию 0,0</td>
-                </tr>
-                <tr>
-                    <td>SC</td>
-                    <td>Масштаб</td>
-                </tr>
-                <tr>
-                    <td>IW</td>
-                    <td>Входное окно</td>
-                </tr>
-                <tr>
-                    <td>RO</td>
-                    <td>Поворот координатной системы</td>
                 </tr>
                 <tr>
                     <td>PG</td>
@@ -64,14 +44,9 @@
                     <td>Опускание пера</td>
                 </tr>
                 <tr>
-                    <td>PA</td>
-                    <td>Абсолютное черчение</td>
+                    <td>SP</td>
+                    <td>Выбор инструмента</td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-
             </table>
 
             <h2 id="PU">PU (Подъем пера)</h2>
@@ -128,22 +103,7 @@ PU19199,0;
                 <lable>Растояние Y</lable><br>
                 <button id="cmdResult">Расчитать</button>
             </div>
-
-            <script type="text/javascript">
-                let cmdResult = document.getElementById('cmdResult');
-                let cmd = document.getElementsByClassName('cmd')[0];
-                console.log(cmd);
-
-                cmdResult.onclick = myFunction;
-
-                function myFunction() {
-                    for (i = 0; i < 10; i = i + 2) {
-                        let a = document.getElementsByTagName('input')[i].value;
-                        let b = document.getElementsByTagName('input')[i + 1].value = a / 40;
-                        console.log(b);
-                    }
-                }
-            </script>
+            <script src="script/cmd.js"></script>
 
             <svg title="Вид на стол сверху" xmlns="http://www.w3.org/2000/svg" viewBox="-1000 -1000 22000 14000" fill="#FFF">
                 <rect x="0" y="0" width="17000" height="11800" fill="white" />
