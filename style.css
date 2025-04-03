@@ -14,22 +14,14 @@
     --color-alert: #C4CA5A;
     /* предупреждение */
     --color-false: #844343;
-    /* убыток */
 
     /* цвета чернил CMYK + W */
-    --color-cyan: ;
-    --color-magenta: ;
-    --color-yellow: ;
-    --color-key: ;
-    --color-white: ;
+    --C: rgb(0, 169, 236);
+    --M: rgb(228, 0, 123);
+    --Y: rgb(248, 245, 0);
+    --K: black;
+    --W: white;
 }
-
-/* тест */
-/*
-header {background: blue}
-main {background: red}
-footer {background: green}
-*/
 
 *,
 *:after,

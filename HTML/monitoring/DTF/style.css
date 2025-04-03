@@ -1,16 +1,5 @@
-body {
-    width: 100%;
-    font-family: sans-serif;
-}
-
-img {
-    margin: 0;
-    padding: 0;
-}
-
-main .wrapper {
+main .wrapper:first-child {
     display: grid;
-    width: 80%;
     margin: auto;
     grid-gap: 20px;
     grid-template-columns: 80px 1fr;
@@ -52,25 +41,11 @@ progress::-moz-progress-bar {
     border: 1px solid red
 }
 
-#C::-webkit-progress-value {
-    background-color: rgb(1, 169, 236);
-}
-
-#M::-webkit-progress-value {
-    background-color: rgb(228, 1, 123);
-}
-
-#Y::-webkit-progress-value {
-    background-color: rgb(248, 245, 1);
-}
-
-#K::-webkit-progress-value {
-    background-color: rgb(1, 1, 1);
-}
-
-#W::-webkit-progress-value {
-    background-color: rgb(255, 255, 240);
-}
+#C::-webkit-progress-value {background-color: var(--C)}
+#M::-webkit-progress-value {background-color: var(--M)}
+#Y::-webkit-progress-value {background-color: var(--Y)}
+#K::-webkit-progress-value {background-color: var(--K)}
+#W::-webkit-progress-value {background-color: var(--W)}
 
 .icon {
     height: 16px;
