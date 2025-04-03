@@ -48,7 +48,7 @@ button {
 
 body {
     color: var(--color-text);
-    font-family: cursive;
+    font-family: sans-serif;
     background-color: var(--color-background);
 }
 
