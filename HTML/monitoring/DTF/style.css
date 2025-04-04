@@ -2,14 +2,14 @@ main .wrapper:first-child {
     display: grid;
     margin: auto;
     grid-gap: 20px;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 100px auto 1fr auto;
     grid-auto-rows: 100px 24;
     grid-template-areas:
-        "ico    ink   "
-        "status status";
+        "ico    value progress name"
+        "status status .. ...";
 }
 
-.ico {
+#ico {
     grid-area: ico;
     height: auto;
     aspect-ratio: 1/1;
@@ -17,6 +17,20 @@ main .wrapper:first-child {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(icon.svg);
+}
+
+#inkValue {
+    grid-area: value
+}
+#inkProgress {
+    grid-area: progress
+}
+#inkName {
+    grid-area: name
+}
+
+progress {
+    width: 100%;
 }
 
 /* INK */
@@ -30,7 +44,7 @@ main .wrapper:first-child {
 progress {
     border-radius: 4px;
     overflow: hidden;
-    border: 1px solid black;
+    border: 1px solid gray
 }
 
 progress::-webkit-progress-bar {

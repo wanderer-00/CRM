@@ -36,6 +36,7 @@ button {
     padding: 10px;
     border: 1px solid #343434;
     background-color: var(--color-block);
+    cursor: pointer;
 }
 
 .wrapper {
