@@ -115,6 +115,33 @@
         <div class="wrapper">
             <h2>Состояние голов</h2>
             <p>Отличное</p>
+            
+            <style>
+                .print-head-stististics {
+                    background-color: #161616;
+                    padding: 1rem;
+                    border-radius: 1rem;
+                }
+                
+                .print-head-stististics > progress {
+                  /* стилевые правила */
+                }
+                .print-head-stististics > progress::-webkit-progress-bar {
+                  /* стилевые правила */
+                }
+                .print-head-stististics > progress::-webkit-progress-value {
+                  /* стилевые правила */
+                }
+                .print-head-stististics > progress::-moz-progress-bar {
+                  /* стилевые правила */
+                }
+            </style>
+            
+            <div class="print-head-stististics">
+                <label for="progress">XP-600 White</label>
+                <progress id="progress" max="100" value="70"></progress>
+            </div>
+            
             <button onclick="headCheck()">Подробнее</button>
             
             <svg id="head1" xmlns="http://www.w3.org/2000/svg" viewBox="0 -3 480 200" width="100%">
@@ -132,6 +159,10 @@
                 <tr>
                     <td>Головы</td>
                     <td>Epson XP600 (DX-11)</td>
+                </tr>
+                <tr>
+                    <td>Срок службы головы</td>
+                    <td>3 - 6 месяцев</td>
                 </tr>
                 <tr>
                     <td>Кол-во голов</td>
