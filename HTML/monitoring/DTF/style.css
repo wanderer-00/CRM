@@ -78,6 +78,7 @@ progress::-moz-progress-bar {
 
 /* состояние голов */
 #cluster-print-head-stististics {
+    user-select: none;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;

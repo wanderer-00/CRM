@@ -2,49 +2,39 @@
     <defs>
         <style>
             .cls-1 {
-                fill: transparent;
+                fill: #857E87;
             }
 
             .cls-2 {
-                fill: transparent;
+                fill: #726874;
             }
 
             .cls-3 {
-                fill: transparent;
+                fill: #5D5360;
             }
 
             .cls-4 {
-                fill: transparent;
+                fill: #ECEAEC;
             }
 
             .cls-5 {
-                fill: transparent;
+                fill: #CDCBCD;
             }
 
             .cls-6 {
-                fill: transparent;
+                fill: #6F6571;
             }
 
             .cls-7 {
                 fill: none;
-                stroke: #5f6368;
+                stroke: black;
                 stroke-linecap: round;
                 stroke-linejoin: round;
                 stroke-width: 15px;
             }
-
-            .C {stroke: rgb(1, 169, 236)}
-            .M {stroke: rgb(228, 1, 123)}
-            .Y {stroke: rgb(248, 245, 1)}
-            .K {stroke: rgb(1, 1, 1)}
-            .W {stroke: rgb(255, 255, 240)}
-            .ink {
-                stroke-width: 20;
-                stroke: black;
-                stroke-linecap: round;
-            }
             
             .name {
+                fill: black;
                 font: bold 80px sans-serif;
             }
         </style>
@@ -70,14 +60,5 @@
     <rect class="cls-6" x="64.86" y="361.86" width="48.56" height="30" />
     <rect class="cls-6" x="386.58" y="361.86" width="48.56" height="30" />
     <path class="cls-7" d="M410.14,293.63H89.86a25,25,0,0,0-25,25v73.23h48.56V352.72H386.58v39.14h48.56V318.63A25,25,0,0,0,410.14,293.63Z" />
-
-    <g class="ink">
-        <line class="C" x1="320" x2="320" y1="190" y2="250"></line>
-        <line class="M" x1="350" x2="350" y1="190" y2="250"></line>
-        <line class="Y" x1="380" x2="380" y1="190" y2="250"></line>
-        <line class="K" x1="410" x2="410" y1="190" y2="250"></line>
-        <line class="W" x1="440" x2="440" y1="190" y2="250"></line>
-    </g>
-    
-    <text x="40" y="246" class="name" fill="#5f6368">DTF</text>
+    <text x="170" y="246" class="name">DTF</text>
 </svg>
