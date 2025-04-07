@@ -118,28 +118,89 @@
             
             <style>
                 .print-head-stististics {
+                    display: inline-block;
                     background-color: #161616;
                     padding: 1rem;
                     border-radius: 1rem;
+                    margin: 0.5rem 0;
                 }
                 
-                .print-head-stististics > progress {
-                  /* стилевые правила */
+                .print-head-stististics > .title {
+                    font-size: 2em;
+                    margin-bottom: 1rem;
                 }
-                .print-head-stististics > progress::-webkit-progress-bar {
-                  /* стилевые правила */
+
+                .print-head-stististics > p {
+                    color: #404040;
+                    margin-bottom: 1rem;
                 }
-                .print-head-stististics > progress::-webkit-progress-value {
-                  /* стилевые правила */
+
+                .progress {
+                    display: flex;
+                    gap: 10px;
                 }
-                .print-head-stististics > progress::-moz-progress-bar {
-                  /* стилевые правила */
+                
+                .progress > div {
+                    width: 6px;
+                    height: 50px;
+                    border-radius: 4px;
+                    background-color: #404040;
                 }
+                
+                .W .progress > div:nth-child(-n+11) {background-color: red}
+                .CMYK .progress > div:nth-child(-n+18) {background-color: red}
             </style>
             
-            <div class="print-head-stististics">
-                <label for="progress">XP-600 White</label>
-                <progress id="progress" max="100" value="70"></progress>
+            <div class="print-head-stististics W">
+                <div class="title">XP-600 WHITE</div>
+                <p>работает 115 / 180 дней  | <b>63.8 %</b></p>
+                
+                <div class="progress">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class="print-head-stististics CMYK">
+                <div class="title">XP-600 CMYK</div>
+                <p>работает 217 / 180 дней | <b>120.5 %</b></p>
+                
+                <div class="progress">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </div>
             
             <button onclick="headCheck()">Подробнее</button>
