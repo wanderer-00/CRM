@@ -116,6 +116,3 @@ progress::-moz-progress-bar {
     border-radius: 4px;
     background-color: #404040;
 }
-/* значения отработки голов */
-.W .progress > div:nth-child(-n+11) {background-color: red}
-.CMYK .progress > div:nth-child(-n+18) {background-color: red}

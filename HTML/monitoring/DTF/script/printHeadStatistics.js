@@ -1,39 +1,46 @@
 let clusterPHS = document.getElementById('cluster-print-head-stististics');
-let time = new Date().getTime(); // текущее время
-console.log('кол-во миллисекунд с этого времени: ', time);
+var date1_0 = new Date();
+var date2_0 = new Date('12-02-2024');
+var daysLag_0 = Math.ceil(Math.abs(date2_0.getTime() - date1_0.getTime()) / (1000 * 3600 * 24));
+console.log(daysLag_0);
 
 
-let head_0 = new Date(2024, 12, 2).getTime(); // время установки головы №1
-let head_1 = new Date(2024, 12, 18).getTime(); // время установки головы №2
+var date1_1 = new Date();
+var date2_1 = new Date('12-18-2024');
+var daysLag_1 = Math.ceil(Math.abs(date2_1.getTime() - date1_1.getTime()) / (1000 * 3600 * 24));
+console.log(daysLag_1);
 
-console.log('Разница во времени', time - head_0);
 
-//function (){
-//    clusterPHS.innerHTML += `
-//        <div class="print-head-stististics W">
-//            <div class="title">XP-600 WHITE</div>
-//            <p>работает 127 / 180 дней  | <b>63.8 %</b></p>
-//
-//            <div class="progress">
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//                <div></div>
-//            </div>
-//        </div>
-//`
-//};
+clusterPHS.innerHTML += `
+        <div class="print-head-stististics">
+            <div class="title">XP-600 WHITE</div>
+            <p>работает ${daysLag_0} / 180 дней  | <b>${Math.floor(daysLag_0/(180/100))}%</b></p>
+
+            <div class="progress">
+				${abc(daysLag_0)}
+            </div>
+        </div>
+`;
+
+clusterPHS.innerHTML += `
+        <div class="print-head-stististics">
+            <div class="title">XP-600 CMYK</div>
+            <p>работает ${daysLag_1} / 180 дней  | <b>${Math.floor(daysLag_1/(180/100))}%</b></p>
+
+            <div class="progress">
+				${abc(daysLag_1)}
+            </div>
+        </div>
+`;
+
+function abc(daysLag) {
+	let i = 0;
+	let bufer = "";
+	for (; i < daysLag / 10 && i<18; i++) {
+		bufer+='<div style = "background-color: red" ></div>';
+	}
+	for (; i < 18; i++) {
+		bufer+='<div style = "background-color: grey" ></div>';
+	}
+	return bufer;
+}
