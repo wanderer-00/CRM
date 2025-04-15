@@ -17,7 +17,7 @@ let DTFProgress = [
         "RocadaMed",
         "ХЭ703996.309/2XL",
         "RokadaMed_futbolka_(ХЭ703996.309-2XL)_2",
-        10,
+        12,
         16
     ],
     [
