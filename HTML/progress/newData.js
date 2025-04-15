@@ -1,44 +1,30 @@
 let DTFProgress = [
     [
         "RocadaMed",
-        "ОА931303",
-        "RokadaMed_nesseser_(ОА931303)_dtf",
-        0,
-        1
+        "ХЭ703996.309/2XL",
+        "RokadaMed_futbolka_(ХЭ703996.309-2XL)_0",
+        49,
+        49
     ],
     [
-        "КТС",
-        "ПР11293,41",
-        "KTS_shopper_(ПР11293,41)_dtf",
-        0,
-        200
+        "RocadaMed",
+        "ХЭ703996.309/2XL",
+        "RokadaMed_futbolka_(ХЭ703996.309-2XL)_1",
+        18,
+        15
     ],
     [
-        "GDC",
-        "ПР14611,3",
-        "gdc_futbolka_(ПР14611,3)_dtf",
-        0,
-        5
+        "RocadaMed",
+        "ХЭ703996.309/2XL",
+        "RokadaMed_futbolka_(ХЭ703996.309-2XL)_2",
+        10,
+        16
     ],
     [
-        "GDC",
-        "ПР14611,3",
-        "gdc_futbolka_(ПР14611,3)_dtf",
+        "RocadaMed",
+        "ХЭ703996.309/2XL",
+        "RokadaMed_futbolka_(ХЭ703996.309-2XL)_3",
         0,
-        10
-    ],
-    [
-        "ТракРесурсРегион",
-        "ОА852028",
-        "TrackResursRegion_podushka2_(ОА852028)_dtf",
-        0,
-        10
-    ],
-    [
-        "Интерколд",
-        "ОА939542",
-        "",
-        0,
-        50
+        17
     ],
 ]
