@@ -11,16 +11,12 @@ let timeEnd1 = new Date('05-04-2025');
 // голова #2 | работает
 let timeSet2 = new Date('05-04-2025');
 let timeEnd2 = new Date('??-??-????');
-// голова #3 | планируется ставить
-let timeSet3 = new Date('05-04-2025');
-let timeEnd3 = new Date('??-??-????');
 
 // вызов функции отрисовки блоков голов
 // дата_установки дата_снятия назначение_головы
 builder(timeSet0, timeEnd0, 'WHITE'); // голова #0
 builder(timeSet1, time, 'CMYK'); // голова #1
 builder(timeSet2, time, 'WHITE'); // голова #2
-builder(timeSet3, time, 'CMYK'); // голова #3
 
 // отрисовка виджета
 function builder(days, time, color){
