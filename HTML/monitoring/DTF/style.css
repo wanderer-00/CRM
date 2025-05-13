@@ -2,7 +2,7 @@ main .wrapper:first-child {
     display: grid;
     margin: auto;
     grid-gap: 20px;
-    grid-template-columns: 100px auto 1fr auto;
+    grid-template-columns: 200px auto 1fr auto;
     grid-auto-rows: 100px 24;
     grid-template-areas:
         "ico    value progress name"
@@ -12,11 +12,11 @@ main .wrapper:first-child {
 #ico {
     grid-area: ico;
     height: auto;
-    aspect-ratio: 1/1;
+    aspect-ratio: 2;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(icon.svg);
+    background-image: url(poster.png);
 }
 
 #inkValue {
