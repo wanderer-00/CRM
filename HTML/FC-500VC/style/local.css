@@ -1,0 +1,63 @@
+#poster-box {
+    margin: 1em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+        "icon title"
+        "icon description"
+    ;
+}
+
+#poster {
+    grid-area: icon;
+    width: 100%;
+    aspect-ratio: 1;
+    background-image: url(../img/poster/transparent.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#title {
+    grid-area: title;
+}
+#title > h1 {
+    margin-top: 0;
+}
+
+#description {
+    grid-area: description
+}
+
+/* кнопка "скачать" */
+/* Style buttons */
+.download {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Darker background on mouse-over */
+.download:hover {
+    background-color: RoyalBlue;
+}
+
+@media (orientation: portrait) {
+    #poster-box {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "icon"
+            "description"
+        ;
+    }
+}
