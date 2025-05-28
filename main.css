@@ -31,10 +31,8 @@ header .wrapper {
     border: 1px solid transparent;
     padding: 1rem;
     border-radius: 0.4rem;
-}
-
-#menu > a:hover {
-    border: 1px solid #343434
+    
+    &:hover {border: 1px solid red}
 }
 
 .ico {
@@ -45,17 +43,9 @@ header .wrapper {
 }
 
 /* grid-area имена */
-#DTF {
-    grid-area: DTF
-}
-
-#Ineo {
-    grid-area: Ineo
-}
-
-#box {
-    grid-area: box
-}
+#DTF {grid-area: DTF}
+#Ineo {grid-area: Ineo}
+#box {grid-area: box}
 
 .box {
     padding: 1em;

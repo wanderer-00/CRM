@@ -33,6 +33,12 @@
     box-sizing: border-box;
 }
 
+/* Отключение кнопки/ссылки */
+.disable {
+    opacity: 0.3;
+    cursor: no-drop;
+}
+
 input,
 button {
     color: var(--color-text);
@@ -69,10 +75,7 @@ ol {
     padding: 0 0 0 20px;
 }
 
-.disable {
-    opacity: 0.3;
-    cursor: no-drop;
-}
+
 
 /*----------------------------------*/
 

@@ -16,7 +16,7 @@
         <div class="wrapper">
             <img src="favicon.svg" width="40px" height="40px" alt="Логотип сайта">
             <h2>CASPER system v0.3</h2>
-            <a href="HTML/login/index.html" id="login" title="Войти в аккаунт">
+            <a class="disable" id="login" title="Войти в аккаунт">
                 <img src="HTML/login/favicon.svg" width="40px" height="40px" alt="Кнопка входа в аккаунт">
             </a>
         </div>
@@ -26,7 +26,7 @@
 
             <nav id="menu">
                 <a class="box" id="DTF" href="HTML/monitoring/DTF/index.html" title="Состояние DTF">
-                    <div class="ico" style="background-image: url(HTML/monitoring/DTF/icon.svg)"></div>
+                    <div class="ico" style="background-image: url(HTML/monitoring/DTF/poster.png)"></div>
                 </a>
 
                 <a class="box" id="Ineo" href="HTML/monitoring/ineo/index.html" title="Состояние Ineo">
@@ -60,18 +60,27 @@
                 <a class="box" id="" href="HTML/HPGL/index.html" title="Инструкции HPGL">
                     <div class="ico" style="background-image: url(HTML/HPGL/favicon.svg)"></div>
                 </a>
-                
-                <a class="box" id="" href="HTML/progress/index.html" title="Прогресс выполнения закозов">
+
+                <a class="box disable" id="" title="Прогресс выполнения закозов">
+                    <div class="ico" style="background-image: url(HTML/progress/favicon.svg)"></div>
+                </a>
+
+                <a class="box disable" id="" title="Нейросеть">
                     <div class="ico" style="background-image: url(HTML/progress/favicon.svg)"></div>
                 </a>
             </nav>
         </div>
     </main>
+
     <footer>
         <div class="wrapper"></div>
     </footer>
 </body>
-<script type="text/javascript" src="menu.js"></script>
+
 <!--menu builder-->
+<script type="text/javascript" src="menu.js"></script>
+
+<!--footer builder-->
 <script type="text/javascript" src="footer.js"></script>
-<!--footer builder--></html>
+
+</html>
