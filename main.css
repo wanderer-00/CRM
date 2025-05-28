@@ -40,6 +40,7 @@ header .wrapper {
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
 }
 
 /* grid-area имена */
