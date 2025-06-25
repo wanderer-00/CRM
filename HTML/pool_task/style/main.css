@@ -1,0 +1,36 @@
+.node circle {
+  fill: var(--color, #1E90FF);
+  stroke: #000;
+  stroke-width: 1.5px;
+  cursor: pointer;
+}
+
+.node text {
+  font: 12px sans-serif;
+  pointer-events: none;
+  fill: #000;
+}
+
+.link {
+  fill: none;
+  stroke: #A9A9A9;
+  stroke-width: 1.5px;
+  marker-end: url(#arrow);
+  transition: opacity 250ms ease-out;
+}
+
+.node {
+    transition: opacity 250ms ease-out;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+    transition: opacity 250ms ease-out;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
