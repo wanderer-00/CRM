@@ -1,0 +1,92 @@
+main > .wrapper {
+    padding: 0 3em;
+    width: 100%;
+}
+
+.tasks {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.task {
+    text-align: center;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    background-color: var(--color-block);
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.task > div {
+    font-size: 0.8em;
+    padding: 0.2em;
+}
+
+.status > img {
+    position: absolute;
+    top: 4px;
+    right: 4px;;
+    cursor: pointer;
+}
+
+
+/* статус коды (горящий(срочный), обычный, приостановленный заказ) */
+/* срочный заказ */
+.fire {
+    border: 1px solid orange;
+    background-color: rgba(255,165,0,.2);
+}
+/* приостановленный заказ */
+.suspended {
+    border: 1px solid purple;
+    background-color: rgba(128,0,128,.2);
+}
+
+font {
+    background-color: aliceblue;
+    padding: 0 2px;
+    border-radius: 4px;
+}
+
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+    .tasks {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .tasks {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .tasks {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .tasks {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 580px) {
+    .tasks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* По надобности дописую промежуточные разрешения, если вдруг по дизайну что то падает на 650px, тогда дописую: */
+
+@media (max-width: 650) {
+
+}
